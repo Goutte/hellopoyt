@@ -38,26 +38,31 @@
     jQuery().ready(function () {
 
         // BLACK CIRCLE
-
+        var $circle = jQuery('#circle');
         var centerizeCircle = function(){
             var widthWindow = jQuery(window).width();
-            var $circle = jQuery('#circle');
-
             $circle.css('left', (widthWindow - $circle.width())/2);
         };
 
         jQuery(window).on('resize', centerizeCircle);
         centerizeCircle();
+
+        $circle.show();
+
     });
 
 
     // SKROLLR
 
     skrollr.init({
-//        forceHeight: false,
-//        easing: {
+        smoothScrolling: true
+        ,forceHeight: false
+//        ,easing: {
 //            vibrate: function(p) {
 //                return Math.sin(p * 10 * Math.PI);
+//            },
+//            polar: function(p) {
+//                return 1 - (p*p);
 //            }
 //        }
     });

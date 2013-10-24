@@ -4,6 +4,35 @@
 @import "normalize";
 @import "introduction";
 @import "portfolio";
+@import "information";
+
+
+
+
+//// MIXINS //
+
+.fulljustify {
+  text-align: justify;
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.fixed {
+  position: fixed;
+}
+.transparent {
+  opacity: 0;
+}
+.smooth {
+  -webkit-transition: all 0.5s ease-in-out;
+  -khtml-transition:  all 0.5s ease-in-out;
+  -moz-transition:    all 0.5s ease-in-out;
+  -o-transition:      all 0.5s ease-in-out;
+  transition:         all 0.5s ease-in-out;
+}
+
 
 //// GLOBAL TAGS
 
@@ -18,6 +47,26 @@ body {
 a {
   text-decoration: none;
 }
+
+hr {
+
+}
+
+
+//// SELECTION
+
+::-moz-selection {
+  background: lighten(@colorBlack,10%);
+  color: darken(@colorWhite, 10%);
+  text-shadow: none;
+}
+
+::selection {
+  background: lighten(@colorBlack,10%);
+  color: darken(@colorWhite, 10%);
+  text-shadow: none;
+}
+
 
 //// HEADER
 
@@ -52,6 +101,8 @@ header {
     float:   left;
     line-height: @heightHeader;
     padding: 0 25px;
+
+    .smooth;
 
     &:hover {
       background-color: @colorWhite;

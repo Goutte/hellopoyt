@@ -30,7 +30,7 @@ providers:
                 data-896="opacity: 0.0;"
         ></div>
         <div id="circle_yeah"
-                data-450="opacity: 0.0; top:  10px; right: -44px; transform: scale(0.2);"
+                data-450="opacity: 0.0; top:  30px; right: -24px; transform: scale(0.2);"
                 data-570="opacity: 1.0; top: -32px; right: -96px; transform: scale(1.0);"
                 data-894="opacity: 1.0; top: -42px; right: -106px;"
                 data-896="opacity: 0.0;"
@@ -65,7 +65,7 @@ providers:
         ></div>
     </div>
 
-    <div id="introduction_row01" class="row row01"></div>
+    <div class="row row01"></div>
     <div class="row row02"></div>
     <div class="row row03"></div>
     <div class="row row04"></div>
@@ -78,7 +78,10 @@ providers:
 <section id="portfolio">
 
     {% for project in this.providers.all_projects %}
-    <article>
+    <article
+        data-000-bottom-top="transform: scale(0.0);"
+        data--311-bottom-top="transform: scale(1.0);"
+    >
         <figure>
             <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
             <figcaption>
@@ -94,12 +97,37 @@ providers:
 
 
 
-<section id="info">
+<section id="information">
+
+    <div class="col_left">
+        <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""
+             data-anchor-target="#information"
+             data-00000-bottom-top="left: -600px; transform: rotateZ(-200deg);"
+             data--0600-bottom-top="left:  000px; transform: rotateZ(0deg);"
+             data-00000-top-bottom="left:  100px; transform: rotateZ(50deg);"
+        >
+        <img id="information_pola_front" src="media/img/information/pola-front.png" alt=""
+             data-anchor-target="#information"
+             data-00000-bottom-top="left: -600px; transform: rotateZ(-150deg);"
+             data--0600-bottom-top="left:  160px; transform: rotateZ(0deg);"
+             data-00000-top-bottom="left:  200px; transform: rotateZ(30deg);"
+        >
+    </div>
+
+    <div class="col_right">
+        <h2>Hellopoyt</h2>
+        <p class="first">
+            Bacon ipsum dolor sit amet labore incididunt et, tail voluptate fugiat meatball cupidatat t-bone kielbasa ea ut andouille culpa. Sausage shoulder meatloaf cow veniam. Aute kielbasa fatback velit, pig ut minim tail tenderloin magna dolore. Pork leberkas jowl pork chop. Pariatur kevin brisket, incididunt minim voluptate tri-tip aute elit pastrami in strip steak.
+        </p>
+        <p class="second">
+            Veniam id dolor pork loin. Mollit pig pork loin ribeye pancetta ut ut turkey ground round capicola veniam frankfurter doner. Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef incididunt filet mignon dolor elit pork belly ad rump nisi.
+        </p>
+    </div>
 
 </section>
 
 
 
 <section id="contact">
-
+    <h2>Contact</h2>
 </section>

@@ -27,8 +27,11 @@
   }
 
   #circle {
+    display: none;
+
     position: fixed;
     top: @heightHeader + @heightIntroRow/2 - @circleRadius; // 235px, overriden by skrollr
+    z-index: 100;
 
     width:  @circleRadius * 2;
     height: @circleRadius * 2;
