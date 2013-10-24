@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# /!\ Launch this from project root
+# It will re-generate the website in the `public` folder
+
+php bin/phrozn.php build src public

@@ -1,0 +1,45 @@
+layout: default.twig
+providers:
+    all_projects:
+        provider: Projects
+---
+
+<section id="introduction">
+
+    <div class="row row01"></div>
+    <div class="row row02"></div>
+    <div class="row row03"></div>
+    <div class="row row04"></div>
+
+</section>
+
+
+
+<section id="portfolio">
+
+    {% for project in this.providers.all_projects %}
+    <article>
+        <figure>
+            <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
+            <figcaption>
+                <span class="title">{{ project.title }}</span>
+                <br>
+                <span class="client">- {{ project.client }} -</span>
+            </figcaption>
+        </figure>
+    </article>
+    {% endfor %}
+
+</section>
+
+
+
+<section id="info">
+
+</section>
+
+
+
+<section id="contact">
+
+</section>

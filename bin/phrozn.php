@@ -1,0 +1,1 @@
+/home/tonioth/Code/WEBSITES/hellopoyt/vendor/farazdagi/phrozn/bin/phrozn.php

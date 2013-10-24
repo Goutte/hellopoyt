@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <title>Hellopoyt!</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="https://plus.google.com/118248552379361137285">
+    <link rel="author" href="https://plus.google.com/118248552379361137285">
+
+    <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="styles/screen.css">
+
+</head>
+<body>
+
+{% include './header.twig' %}
+<div class="container">
+    {{ content }}
+    {% include './footer.twig' %}
+</div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script>
+    jQuery().ready(function () {
+
+    });
+</script>
+
+</body>
+</html>
+

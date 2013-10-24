@@ -1,0 +1,49 @@
+
+@import "configuration";
+@import "reset";
+@import "normalize";
+@import "introduction";
+
+//// GLOBAL TAGS
+
+html {
+
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+//// HEADER
+
+header {
+
+  @heightHeader: 60px;
+
+  height: @heightHeader;
+  background-color: @colorBlack;
+
+  a {
+    color: @colorWhite;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+
+    display: block;
+    float:   left;
+    line-height: @heightHeader;
+    padding: 0 25px;
+
+    &:hover {
+      background-color: @colorWhite;
+      color: @colorBlack;
+    }
+  }
+
+}
+
+

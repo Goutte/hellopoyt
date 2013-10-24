@@ -1,0 +1,38 @@
+{
+    "name": "hellopoyt",
+    "type": "project",
+    "description": "The portfolio of Pat Grivet",
+    "keywords": ["Pat Grivet", "Portfolio"],
+    "homepage": "",
+    "license":  "Libre",
+    "authors": [
+        {
+            "name":  "Goutte",
+            "email": "antoine@goutenoir.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3",
+        "farazdagi/phrozn": "dev-hellopoyt"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-0": {
+            "Goutte": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Goutte/phrozn"
+        }
+    ],
+    "scripts": {
+        "post-update-cmd": [
+            "rm -f bin/phrozn.php",
+            "ln -s $(pwd)/vendor/farazdagi/phrozn/bin/phrozn.php bin/phrozn.php",
+            "chmod +x bin/phrozn.php"
+        ]
+    }
+}
