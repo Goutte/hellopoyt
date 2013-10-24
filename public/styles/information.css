@@ -1,0 +1,41 @@
+#information {
+  margin: 20px auto 0 auto;
+  padding-top: 30px;
+  width: 980px;
+  overflow: visible;
+  min-height: 330px;
+}
+#information .col_left {
+  float: left;
+  width: 441px;
+  position: relative;
+  min-height: 310px;
+  overflow: visible;
+}
+#information .col_left img {
+  position: absolute;
+}
+#information .col_left #information_pola_front {
+  top: 70px;
+  left: 160px;
+}
+#information .col_right {
+  float: right;
+  width: 519px;
+  padding-left: 20px;
+}
+#information h2 {
+  font-size: 0;
+  width: 223px;
+  height: 75px;
+  background: url('../media/img/hellopoyt.png') no-repeat center center;
+  position: relative;
+  left: -4px;
+}
+#information p {
+  font-size: 0.95em;
+  text-align: justify;
+}
+#information p.second {
+  color: #a6a6a6;
+}

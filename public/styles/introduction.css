@@ -1,0 +1,73 @@
+#introduction .row01 {
+  background-image: url('../media/img/introduction/01.jpg');
+}
+#introduction .row03 {
+  background-image: url('../media/img/introduction/01.jpg');
+}
+#introduction .row05 {
+  background-image: url('../media/img/introduction/01.jpg');
+}
+#introduction .row {
+  height: 600px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+#introduction #circle {
+  display: none;
+  position: fixed;
+  top: 235px;
+  z-index: 100;
+  width: 250px;
+  height: 250px;
+  overflow: visible;
+  border-radius: 50%;
+  background-color: #000;
+}
+#introduction #circle .circle_content {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#introduction #circle_hello {
+  background-image: url('../media/img/circle/hello.png');
+}
+#introduction #circle_i_m_art_director {
+  background-image: url('../media/img/circle/i-m-art-director.png');
+}
+#introduction #circle_yeah {
+  position: absolute;
+  top: -42px;
+  right: -106px;
+  width: 96px;
+  height: 96px;
+  background: url('../media/img/circle/yeah.png') no-repeat center center;
+}
+#introduction #circle_and {
+  background-image: url('../media/img/circle/and.png');
+}
+#introduction #circle_illustrator {
+  background-image: url('../media/img/circle/illustrator.png');
+}
+#introduction #circle_pen_left {
+  position: absolute;
+  top: 13px;
+  left: -68px;
+  width: 64px;
+  height: 232px;
+  background: url('../media/img/circle/pen_left.png') no-repeat center center;
+}
+#introduction #circle_pen_right {
+  position: absolute;
+  top: 13px;
+  right: -68px;
+  width: 64px;
+  height: 232px;
+  background: url('../media/img/circle/pen_right.png') no-repeat center center;
+}
+#introduction #circle_that_s_my_work {
+  background-image: url('../media/img/circle/that-s-my-work.png');
+}
