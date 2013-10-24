@@ -1,8 +1,18 @@
+# PAS TOUCHE (ou je mords!)
+
 layout: default.twig
 providers:
     all_projects:
         provider: RichElements
         folder: projects
+
+##################
+## Configuration
+
+contact:
+    mail:    "mailto:pat.grivet@gmail.com"
+    behance: "http://www.behance.net/patgrivet‎"
+    tumblr:  "http://hellopoyt.tumblr.com"
 
 ---
 
@@ -10,8 +20,6 @@ providers:
 
     <div id="circle"
          data-anchor-target="#portfolio"
-         {#data-510-top-top="top: 235px;"#}
-         {#data-111-top-top="top: -251px;"#}
          data-510-top-top="transform: scale(1.0);"
          data-311-top-top="transform: scale(0.0);"
          data-795="transform: rotateX(0deg);"
@@ -78,6 +86,7 @@ providers:
 <section id="portfolio">
 
     {% for project in this.providers.all_projects %}
+
     <article
         data-000-bottom-top="transform: scale(0.0);"
         data--311-bottom-top="transform: scale(1.0);"
@@ -91,6 +100,7 @@ providers:
             </figcaption>
         </figure>
     </article>
+
     {% endfor %}
 
 </section>
@@ -104,13 +114,13 @@ providers:
              data-anchor-target="#information"
              data-00000-bottom-top="left: -600px; transform: rotateZ(-200deg);"
              data--0600-bottom-top="left:  000px; transform: rotateZ(0deg);"
-             data-00000-top-bottom="left:  100px; transform: rotateZ(50deg);"
+             data-00000-top-bottom="left:  100px; transform: rotateZ(20deg);"
         >
         <img id="information_pola_front" src="media/img/information/pola-front.png" alt=""
              data-anchor-target="#information"
              data-00000-bottom-top="left: -600px; transform: rotateZ(-150deg);"
              data--0600-bottom-top="left:  160px; transform: rotateZ(0deg);"
-             data-00000-top-bottom="left:  200px; transform: rotateZ(30deg);"
+             data-00000-top-bottom="left:  200px; transform: rotateZ(15deg);"
         >
     </div>
 
@@ -126,8 +136,22 @@ providers:
 
 </section>
 
-
+<hr class="clear">
 
 <section id="contact">
     <h2>Contact</h2>
+    <nav>
+        <a id="contact_mail" href="{{ page.contact.mail }}">
+            <img src="media/img/contact/btn-mail.png" alt="Mail">
+            <span>mail</span>
+        </a>
+        <a id="contact_behance" href="{{ page.contact.behance }}">
+            <img src="media/img/contact/btn-behance.png" alt="Behance">
+            <span>behance</span>
+        </a>
+        <a id="contact_tumblr" href="{{ page.contact.tumblr }}">
+            <img src="media/img/contact/btn-tumblr.png" alt="Tumblr">
+            <span>tumblr</span>
+        </a>
+    </nav>
 </section>

@@ -2,36 +2,16 @@
 @import "configuration";
 @import "reset";
 @import "normalize";
+@import "mixins";
 @import "introduction";
 @import "portfolio";
 @import "information";
+@import "contact";
 
 
 
 
-//// MIXINS //
 
-.fulljustify {
-  text-align: justify;
-}
-.fulljustify:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-.fixed {
-  position: fixed;
-}
-.transparent {
-  opacity: 0;
-}
-.smooth {
-  -webkit-transition: all 0.5s ease-in-out;
-  -khtml-transition:  all 0.5s ease-in-out;
-  -moz-transition:    all 0.5s ease-in-out;
-  -o-transition:      all 0.5s ease-in-out;
-  transition:         all 0.5s ease-in-out;
-}
 
 
 //// GLOBAL TAGS
@@ -49,7 +29,8 @@ a {
 }
 
 hr {
-
+  width: @widthContainer;
+  margin-top: 60px;
 }
 
 

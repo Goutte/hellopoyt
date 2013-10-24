@@ -1,0 +1,76 @@
+@import "configuration";
+@import "mixins";
+
+#contact {
+  clear: left;
+  margin: 50px auto 50px auto;
+  width: @widthContainer;
+  overflow: visible;
+
+  h2 {
+    font-size: 0;
+    width: 169px;
+    height: 49px;
+    background: url('../media/img/contact.png') no-repeat center center;
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 75%;
+    margin: 42px auto 0 auto;
+    overflow: auto;
+    min-height: 210px;
+
+    a {
+      float: left;
+      width: 33%;
+
+      img {
+        border: 0;
+        display: block;
+        margin: 0 auto 0 auto;
+      }
+      span {
+        display: block;
+        margin: 10px auto 0 auto;
+        height: 42px;
+        font-size: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        opacity: 0.0;
+        position: relative;
+        top: -30px;
+
+        .smooth;
+      }
+
+      &:hover, &:focus {
+        span {
+          opacity: 1.0;
+          top: 0;
+        }
+      }
+    }
+
+    #contact_mail {
+      span {
+        background-image: url('../media/img/mail.png');
+      }
+    }
+
+    #contact_behance {
+      span {
+        background-image: url('../media/img/behance.png');
+      }
+    }
+
+    #contact_tumblr {
+      span {
+        background-image: url('../media/img/tumblr.png');
+      }
+    }
+
+  }
+
+}
