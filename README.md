@@ -2,6 +2,7 @@
 DEV BLACKBOARD
 ==============
 
+Remove scrollspy
 Copy root files too, using whitelist.
 
 
