@@ -1,23 +1,101 @@
 
-// Section d'introduction, avec le cercle noir et les images en dessous
-// Si tu rajoutes des lignes, rajoute des rowXX ici avec le bg approprié
+// This is the introduction section, with the scrolling animated black circle
+// and the background images behind, numeroted rowXX.
+
+@import "configuration";
 
 #introduction {
-
-  .row {
-    height: 600px;
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-  }
 
   .row01 {
     background-image: url('../media/img/introduction/01.jpg');
   }
 
   .row03 {
-    background-image: url('../media/img/introduction/01.jpg');
+    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+  }
+
+  .row05 {
+    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+  }
+
+  .row {
+    height: @heightIntroRow;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  #circle {
+    position: fixed;
+    top: @heightHeader + @heightIntroRow/2 - @circleRadius; // 235px, overriden by skrollr
+
+    width:  @circleRadius * 2;
+    height: @circleRadius * 2;
+
+    overflow: visible;
+    border-radius: 50%;
+    background-color: @colorBlack;
+
+    .circle_content {
+      position: absolute;
+      //display: block;
+      width:  @circleRadius * 2;
+      height: @circleRadius * 2;
+
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #circle_hello {
+    background-image: url('../media/img/circle/hello.png');
+  }
+
+  #circle_i_m_art_director {
+    background-image: url('../media/img/circle/i-m-art-director.png');
+  }
+
+  #circle_yeah {
+    position: absolute;
+    top:   -42px;
+    right: -106px;
+
+    width:  96px;
+    height: 96px;
+    background: url('../media/img/circle/yeah.png') no-repeat center center;
+  }
+
+  #circle_and {
+    background-image: url('../media/img/circle/and.png');
+  }
+
+  #circle_illustrator {
+    background-image: url('../media/img/circle/illustrator.png');
+  }
+
+  #circle_pen_left {
+    position: absolute;
+    top:    10px;
+    left: -68px;
+
+    width:  64px;
+    height: 232px;
+    background: url('../media/img/circle/pen_left.png') no-repeat center center;
+  }
+
+  #circle_pen_right {
+    position: absolute;
+    top:    10px;
+    right: -68px;
+
+    width:  64px;
+    height: 232px;
+    background: url('../media/img/circle/pen_right.png') no-repeat center center;
+  }
+
+  #circle_that_s_my_work {
+    background-image: url('../media/img/circle/that-s-my-work.png');
   }
 
 }

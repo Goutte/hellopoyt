@@ -1,0 +1,30 @@
+@import "configuration";
+
+#portfolio {
+  margin: 50px auto 0 auto;
+
+  width: @widthContainer;
+  overflow: auto;
+
+  article {
+    float: left;
+    padding: 10px 10px 20px 10px;
+
+    figcaption {
+      padding-top: 13px;
+      text-align: center;
+      color: @colorGrey;
+      letter-spacing: -1px;
+
+      .title {
+        font-weight: bold;
+      }
+      .client {
+        padding-top: 4px;
+        font-size: 0.8em;
+        color: lighten(@colorGrey,10%);
+      }
+    }
+  }
+
+}

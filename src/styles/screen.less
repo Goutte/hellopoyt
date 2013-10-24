@@ -3,6 +3,7 @@
 @import "reset";
 @import "normalize";
 @import "introduction";
+@import "portfolio";
 
 //// GLOBAL TAGS
 
@@ -22,10 +23,24 @@ a {
 
 header {
 
-  @heightHeader: 60px;
-
   height: @heightHeader;
   background-color: @colorBlack;
+
+  .container {
+    width: @widthContainer;
+    overflow: auto;
+    margin: 0 auto;
+  }
+
+  h1 {
+    float: left;
+    font-size: 0;
+    height: @heightHeader;
+    width: 120px;
+    margin-right: 50px;
+
+    background: url('../media/img/hellopoyt.png') no-repeat center center;
+  }
 
   a {
     color: @colorWhite;
@@ -47,3 +62,9 @@ header {
 }
 
 
+//// FOOTER
+
+footer {
+  height: 300px;
+  background-color: @colorBlack;
+}

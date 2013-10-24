@@ -2,7 +2,7 @@
 DEV BLACKBOARD
 ==============
 
-GIT !
+Copy root files too, using whitelist.
 
 
 
@@ -62,13 +62,24 @@ It should auto-commit to a git repo, too !
 ???
 
 
+HOW TO ANIMATE
+==============
+
+1. Read the Manual
+------------------
+
+https://github.com/Prinzhorn/skrollr
+
+
+2. Play !
+---------
+
+Edit `src/entries/index.twig` and `src/styles/introduction.less`.
+
 
 PITFALLS
 ========
 
 Phrozn plugin's `projectPath` logic require a `.phrozn` folder at the root of the project.
-It need not contain anything.
 This is dumb, IMNSHO, as I'd rather use explicit `src` and `public` folders as respectively in and out.
-Which I do, and therefore observed broken behavior.
-
-See Phrozn\Path\Project.
+Which I do, and therefore observed broken behavior. I hotfixed Phrozn, removing usage of `Phrozn\Path\Project`.

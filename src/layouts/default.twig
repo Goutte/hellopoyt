@@ -32,11 +32,36 @@
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="scripts/vendor/skrollr.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
     jQuery().ready(function () {
 
+        // BLACK CIRCLE
+
+        var centerizeCircle = function(){
+            var widthWindow = jQuery(window).width();
+            var $circle = jQuery('#circle');
+
+            $circle.css('left', (widthWindow - $circle.width())/2);
+        };
+
+        jQuery(window).on('resize', centerizeCircle);
+        centerizeCircle();
     });
+
+
+    // SKROLLR
+
+    skrollr.init({
+//        forceHeight: false,
+//        easing: {
+//            vibrate: function(p) {
+//                return Math.sin(p * 10 * Math.PI);
+//            }
+//        }
+    });
+
 </script>
 
 </body>
