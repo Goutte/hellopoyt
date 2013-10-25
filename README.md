@@ -24,7 +24,8 @@ Example : `src/projects/010-ubisoft-25-years`.
 
 Inside this folder, create the file `description.yml`, with a content looking like this :
 
-```
+``` description.yml
+title: Ubisoft 25 Years
 mission: Art Direction / Illustration
 client: Ubisoft
 agency: Diplomatic-Cover
@@ -33,7 +34,7 @@ link: http://25years.ubi.com
 
 Then, upload a `thumbnail.jpg` in the folder, size 225x250 pixels.
 Then, upload other `.jpg` images of size 940x440 pixels.
-Their names do not matter as long as there are no funny characters inside. Say only alphanumericals and `-` or `_` to be on the safe side.
+Their names do not matter as long as there are no funny characters inside. Say only alphanumericals and `-` or `_`, to be on the safe side.
 
 Re-generate the website, and you're done !
 
@@ -44,10 +45,10 @@ Update a Project
 Just update the files, and then re-generate the website.
 
 
-Generate the Website
---------------------
+(Re)Generate the Website
+------------------------
 
-The sources of the website are in the folder `src/`, and the output folder is `public`.
+The sources of the website are in the folder `src/`, and the output will be written in `public`.
 Only the latter should be available on the server.
 
 
@@ -87,4 +88,5 @@ PITFALLS
 
 Phrozn plugin's `projectPath` logic require a `.phrozn` folder at the root of the project.
 This is dumb, IMNSHO, as I'd rather use explicit `src` and `public` folders as respectively in and out.
-Which I do, and therefore observed broken behavior. I hotfixed Phrozn, removing usage of `Phrozn\Path\Project`.
+Which I do, and therefore observed broken behavior.
+**So,** I hotfixed Phrozn, removing usage of `Phrozn\Path\Project`.
