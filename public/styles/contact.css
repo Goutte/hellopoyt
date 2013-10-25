@@ -22,6 +22,10 @@
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 #contact {
   clear: left;
   margin: 20px auto 50px auto;

@@ -366,6 +366,10 @@ table {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
 }
@@ -600,23 +604,42 @@ header h1 {
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
 }
 header a {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 15px;
-  display: block;
-  float: left;
-  line-height: 60px;
-  padding: 0 25px;
   -webkit-transition: all 0.5s ease-in-out;
   -khtml-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  display: block;
+  height: 60px;
 }
-header a:hover {
+header nav a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  float: left;
+  line-height: 60px;
+  padding: 0 25px;
+}
+header nav a:hover,
+header nav a:focus {
   background-color: #fff;
   color: #000;
+}
+header a.email {
+  font-size: 0;
+  float: right;
+  width: 50px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('../media/img/envelope.png');
+}
+header a.email:hover,
+header a.email:focus {
+  transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 footer {
   height: 300px;

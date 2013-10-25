@@ -9,11 +9,6 @@
 @import "contact";
 
 
-
-
-
-
-
 //// GLOBAL TAGS
 
 html {
@@ -73,21 +68,41 @@ header {
   }
 
   a {
+    .smooth;
+    display: block;
+    height: @heightHeader;
+  }
+
+  nav a {
     color: @colorWhite;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 15px;
 
-    display: block;
     float:   left;
     line-height: @heightHeader;
     padding: 0 25px;
 
-    .smooth;
-
-    &:hover {
+    &:hover, &:focus {
       background-color: @colorWhite;
       color: @colorBlack;
+    }
+  }
+
+  a.email{
+    font-size: 0;
+    float:   right;
+    width:  50px;
+
+    .background-image;
+    background-image: url('../media/img/envelope.png');
+
+    &:hover, &:focus {
+      @scale: 1.2;
+      transform: scale(@scale);
+      -o-transform: scale(@scale);
+      -moz-transform: scale(@scale);
+      -webkit-transform: scale(@scale);
     }
   }
 

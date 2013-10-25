@@ -7,3 +7,11 @@ skip: [/\.swp$/, /\.bak$/, /.DS_Store/, /^\.directory$/, /\.yml$/]
 
 # Folders to copy (besides `media`)
 copy: [projects]
+
+##################
+## Configuration
+
+contact:
+    mail:    "mailto:pat.grivet@gmail.com"
+    behance: "http://www.behance.net/patgrivet‎"
+    tumblr:  "http://hellopoyt.tumblr.com"

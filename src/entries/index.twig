@@ -1,18 +1,10 @@
-# PAS TOUCHE (ou je mords!)
+## PAS TOUCHE (ou je mords!)
 
 layout: default.twig
 providers:
     all_projects:
         provider: RichElements
         folder: projects
-
-##################
-## Configuration
-
-contact:
-    mail:    "mailto:pat.grivet@gmail.com"
-    behance: "http://www.behance.net/patgrivet‎"
-    tumblr:  "http://hellopoyt.tumblr.com"
 
 ---
 
@@ -82,7 +74,6 @@ contact:
 </section>
 
 
-
 <section id="portfolio">
 
     {% for project in this.providers.all_projects %}
@@ -104,7 +95,6 @@ contact:
     {% endfor %}
 
 </section>
-
 
 
 <section id="information">
@@ -141,15 +131,15 @@ contact:
 <section id="contact">
     <h2>Contact</h2>
     <nav>
-        <a id="contact_mail" href="{{ page.contact.mail }}">
+        <a id="contact_mail" href="{{ this.contact.mail }}">
             <img src="media/img/contact/btn-mail.png" alt="Mail">
             <span>mail</span>
         </a>
-        <a id="contact_behance" href="{{ page.contact.behance }}">
+        <a id="contact_behance" href="{{ this.contact.behance }}">
             <img src="media/img/contact/btn-behance.png" alt="Behance">
             <span>behance</span>
         </a>
-        <a id="contact_tumblr" href="{{ page.contact.tumblr }}">
+        <a id="contact_tumblr" href="{{ this.contact.tumblr }}">
             <img src="media/img/contact/btn-tumblr.png" alt="Tumblr">
             <span>tumblr</span>
         </a>
