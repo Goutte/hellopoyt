@@ -19,7 +19,7 @@
     "require-dev": {},
     "autoload": {
         "psr-0": {
-            "Goutte": "src"
+            "Goutte": "src/plugins"
         }
     },
     "repositories": [

@@ -6,6 +6,10 @@ Remove scrollspy
 Copy root files too, using whitelist.
 
 
+HOW TO INSTALL
+==============
+
+Use [Composer](http://getcomposer.org).
 
 
 HOW TO USE
@@ -43,8 +47,11 @@ Just update the files, and then re-generate the website.
 Generate the Website
 --------------------
 
-Dev
-~~~
+The sources of the website are in the folder `src/`, and the output folder is `public`.
+Only the latter should be available on the server.
+
+
+### Dev
 
 Launch in CLI :
 
@@ -52,10 +59,7 @@ Launch in CLI :
 bin/build
 ```
 
-
-
-Prod
-~~~~
+### Prod
 
 Visit a certain (secret!) URL.
 It should auto-commit to a git repo, too !

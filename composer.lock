@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f72c63631884a37db384607c9d0d4b9b",
+    "hash": "b40240555e18388bee0d7fb7d93ab489",
     "packages": [
         {
             "name": "farazdagi/phrozn",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/textile/php-textile.git",
-                "reference": "86113b48a4db5ad8f8210774b6cfb81fc7675c97"
+                "reference": "9bfdc66e125bd04fe9bf5e84165e675ce5cd1020"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/textile/php-textile/zipball/86113b48a4db5ad8f8210774b6cfb81fc7675c97",
-                "reference": "86113b48a4db5ad8f8210774b6cfb81fc7675c97",
+                "url": "https://api.github.com/repos/textile/php-textile/zipball/9bfdc66e125bd04fe9bf5e84165e675ce5cd1020",
+                "reference": "9bfdc66e125bd04fe9bf5e84165e675ce5cd1020",
                 "shasum": ""
             },
             "require": {
@@ -186,7 +186,7 @@
             ],
             "description": "A lightweight markup language that takes (almost) plaintext and converts it into well formed HTML.",
             "homepage": "https://github.com/textile/php-textile",
-            "time": "2013-10-24 05:34:42"
+            "time": "2013-10-24 19:58:48"
         },
         {
             "name": "pear/archive_tar",

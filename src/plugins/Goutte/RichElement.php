@@ -2,10 +2,29 @@
 
 namespace Goutte;
 
-
 use Symfony\Component\Yaml\Yaml;
 
-class Element {
+/**
+ * This is an OOP approach to Rich Elements for Phrozn.
+ * It will look into the folder for :
+ * - description.yml
+ *   Will read its contents and parse them as array into `$data`.
+ *   Then, a magic getter will fetch any property held in `$data`.
+ *   This is where the magic lies, so if you have the property `foo: "bar"` in the YAML,
+ *   you will be able to do `{{ element.foo }}` in the template, and it will print `bar`.
+ * - thumbnail.jpg
+ * - other image files
+ *
+ * Other files and subfolders will be ignored.
+ * Thumbnail and images will then be accessible as relative URLs, HTML-ready.
+ *
+ * /!\ This will probably not work as expected if the path has special characters.
+ *     Make sure your folders are simple alphanumericals validating \^[a-zA-Z0-9-]+$\
+ *
+ * Class RichElement
+ * @author Goutte <antoine@goutenoir.com>
+ */
+class RichElement {
 
     /**
      * The directory holding the data for this element
