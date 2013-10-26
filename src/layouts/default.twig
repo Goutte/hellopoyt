@@ -49,14 +49,20 @@
 
         $circle.show();
 
-    });
+        var updateIntroRows = function(){
+            var heightWindow = jQuery(window).height();
+            jQuery("#introduction .row").height(heightWindow);
+        };
+
+        jQuery(window).on('resize', updateIntroRows);
+        updateIntroRows();
 
 
-    // SKROLLR
+        // SKROLLR
 
-    skrollr.init({
-        smoothScrolling: true
-        ,forceHeight: false
+        skrollr.init({
+            smoothScrolling: true
+            ,forceHeight: false
 //        ,easing: {
 //            vibrate: function(p) {
 //                return Math.sin(p * 10 * Math.PI);
@@ -65,7 +71,10 @@
 //                return 1 - (p*p);
 //            }
 //        }
+        });
+
     });
+
 
 </script>
 

@@ -12,7 +12,15 @@
     background-image: url('../media/img/introduction/01.jpg');
   }
 
+  .row02 {
+    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+  }
+
   .row03 {
+    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+  }
+
+  .row04 {
     background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
   }
 
@@ -21,12 +29,19 @@
   }
 
   .row {
-    height: @heightIntroRow;
+    height: @heightIntroRow; // overriden by javascript to window.height()
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
+
+    position: relative;
+    z-index: 10;
   }
+
+//  .row.fake {
+//    position: static;
+//  }
 
   #circle {
     display: none;

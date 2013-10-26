@@ -4,12 +4,24 @@ entries:
 
 # Files to skip - list of preg expressions is expected
 # These are matched against the whole path of the files
-skip: [/\.swp$/, /\.bak$/, /\.DS_Store$/, /^\.directory$/, /\.yml$/]
+skip:
+  - /\.swp$/
+  - /\.bak$/
+  - /\.DS_Store$/
+  - /^\.directory$/
+  - /\.yml$/
 
 # Folders and files to copy without processing
 # Note that `media` will be copied regardless of this option,
 # as long as we don't want to break BC (v0.6 ?)
-copy: [media, projects, favicon.ico, humans.txt, robots.txt, .htaccess]
+copy:
+  - media
+  - projects
+  - .htaccess
+  - humans.txt
+  - robots.txt
+  - favicon.ico
+  - apple-touch-icon.png
 
 
 ##################
@@ -17,5 +29,5 @@ copy: [media, projects, favicon.ico, humans.txt, robots.txt, .htaccess]
 
 contact:
     mail:    "mailto:pat.grivet@gmail.com"
-    behance: "http://www.behance.net/patgrivet‎"
+    behance: "http://www.behance.net/patgrivet"
     tumblr:  "http://hellopoyt.tumblr.com"
