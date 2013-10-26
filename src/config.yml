@@ -1,4 +1,28 @@
-# Site configuration
+#################
+# CONFIGURATION #
+################
+
+hellopoyt:
+  p1: |
+    Bacon ipsum dolor sit amet labore incididunt et, tail voluptate fugiat meatball cupidatat t-bone kielbasa ea ut andouille culpa.
+    Sausage shoulder meatloaf cow veniam. Aute kielbasa fatback velit, pig ut minim tail tenderloin magna dolore.
+    Pork leberkas jowl pork chop. Pariatur kevin brisket, incididunt minim voluptate tri-tip aute elit pastrami in strip steak.
+  p2: |
+    Veniam id dolor pork loin. Mollit pig pork loin ribeye pancetta ut ut turkey ground round capicola veniam frankfurter doner.
+    Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef incididunt filet mignon dolor elit pork belly ad rump nisi.
+
+
+contact:
+  mail:    "mailto:pat.grivet@gmail.com"
+  behance: "http://www.behance.net/patgrivet"
+  tumblr:  "http://hellopoyt.tumblr.com"
+
+
+
+################################################################
+# DO NOT TOUCH ANYTHING BELOW THIS LINE OR I WILL BREATHE FIRE #
+###############################################################
+
 entries:
   layout: default.twig
 
@@ -22,23 +46,3 @@ copy:
   - robots.txt
   - favicon.ico
   - apple-touch-icon.png
-
-
-###################
-## CONFIGURATION ##
-###################
-
-hellopoyt:
-  p1: |
-    Bacon ipsum dolor sit amet labore incididunt et, tail voluptate fugiat meatball cupidatat t-bone kielbasa ea ut andouille culpa.
-    Sausage shoulder meatloaf cow veniam. Aute kielbasa fatback velit, pig ut minim tail tenderloin magna dolore.
-    Pork leberkas jowl pork chop. Pariatur kevin brisket, incididunt minim voluptate tri-tip aute elit pastrami in strip steak.
-  p2: |
-    Veniam id dolor pork loin. Mollit pig pork loin ribeye pancetta ut ut turkey ground round capicola veniam frankfurter doner.
-    Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef incididunt filet mignon dolor elit pork belly ad rump nisi.
-
-
-contact:
-  mail:    "mailto:pat.grivet@gmail.com"
-  behance: "http://www.behance.net/patgrivet"
-  tumblr:  "http://hellopoyt.tumblr.com"

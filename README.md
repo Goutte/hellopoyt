@@ -2,18 +2,41 @@
 DEV BLACKBOARD
 ==============
 
-Remove scrollspy
-Copy root files too, using whitelist.
+Project details.
+Secret URL for re-generation.
 
 
 HOW TO INSTALL
 ==============
 
+This is for devs only !
 Use [Composer](http://getcomposer.org).
+Then, generate the website.
+
+
+WHAT YOU NEED TO KNOW
+=====================
+
+The SOURCES of the website are under the `src/` folder.
+This is the folder where you will find EVERYTHING there is to change.
+
+The generated HTML/CSS/JS will be in the `public/` folder.
+NEVER EVER change files in the `public/` folder as they will be OVERWRITTEN !
+
+Other folders you don't care about :
+- `bin` : dev scripts you need not care about
+- `design` : misc design sources, not useful for the website but useful to me
+- `vendor` : external libraries needed to make things work
+
 
 
 HOW TO USE
 ==========
+
+Change intro images
+-------------------
+
+Look into `src/styles/introduction.less`, from row01 to row05. Easy !
 
 Create new Project
 ------------------
