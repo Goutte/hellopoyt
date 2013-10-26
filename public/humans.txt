@@ -1,0 +1,13 @@
+# TEAM
+
+    Pat Grivet -- Art Director & Webmaster
+    Antoine Goutenoir -- Developer -- http://antoine.goutenoir.com
+
+# THANKS
+
+    Joffrey Jochum
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, PHP5
+    Phrozn, jQuery, Modernizr, Skrollr

@@ -370,6 +370,9 @@ table {
   background-position: center center;
   background-repeat: no-repeat;
 }
+#introduction {
+  padding-top: 50px;
+}
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
 }
@@ -389,7 +392,7 @@ table {
 #introduction #circle {
   display: none;
   position: fixed;
-  top: 235px;
+  top: 225px;
   z-index: 100;
   width: 250px;
   height: 250px;
@@ -587,7 +590,10 @@ hr {
   text-shadow: none;
 }
 header {
-  height: 60px;
+  position: fixed;
+  z-index: 50;
+  height: 50px;
+  width: 100%;
   background-color: #000;
 }
 header .container {
@@ -598,7 +604,7 @@ header .container {
 header h1 {
   float: left;
   font-size: 0;
-  height: 60px;
+  height: 50px;
   width: 120px;
   margin-right: 50px;
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
@@ -610,7 +616,7 @@ header a {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   display: block;
-  height: 60px;
+  height: 50px;
 }
 header nav a {
   color: #fff;
@@ -618,7 +624,7 @@ header nav a {
   font-weight: bold;
   font-size: 15px;
   float: left;
-  line-height: 60px;
+  line-height: 50px;
   padding: 0 25px;
 }
 header nav a:hover,

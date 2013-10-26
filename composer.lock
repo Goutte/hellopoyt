@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Goutte/phrozn.git",
-                "reference": "60ff7a24c91aa8826f752e7bd7b6c3ca53e411b4"
+                "reference": "9385fd1c1f02232dce8c6415e8cc8040528922fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Goutte/phrozn/zipball/60ff7a24c91aa8826f752e7bd7b6c3ca53e411b4",
-                "reference": "60ff7a24c91aa8826f752e7bd7b6c3ca53e411b4",
+                "url": "https://api.github.com/repos/Goutte/phrozn/zipball/9385fd1c1f02232dce8c6415e8cc8040528922fc",
+                "reference": "9385fd1c1f02232dce8c6415e8cc8040528922fc",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
             "support": {
                 "source": "https://github.com/Goutte/phrozn/tree/hellopoyt"
             },
-            "time": "2013-10-24 05:45:49"
+            "time": "2013-10-26 07:16:08"
         },
         {
             "name": "leafo/lessphp",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/textile/php-textile.git",
-                "reference": "9bfdc66e125bd04fe9bf5e84165e675ce5cd1020"
+                "reference": "280369bb6da49cd1797346fb986cff5a18730bd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/textile/php-textile/zipball/9bfdc66e125bd04fe9bf5e84165e675ce5cd1020",
-                "reference": "9bfdc66e125bd04fe9bf5e84165e675ce5cd1020",
+                "url": "https://api.github.com/repos/textile/php-textile/zipball/280369bb6da49cd1797346fb986cff5a18730bd6",
+                "reference": "280369bb6da49cd1797346fb986cff5a18730bd6",
                 "shasum": ""
             },
             "require": {
@@ -186,7 +186,7 @@
             ],
             "description": "A lightweight markup language that takes (almost) plaintext and converts it into well formed HTML.",
             "homepage": "https://github.com/textile/php-textile",
-            "time": "2013-10-24 19:58:48"
+            "time": "2013-10-25 20:47:53"
         },
         {
             "name": "pear/archive_tar",

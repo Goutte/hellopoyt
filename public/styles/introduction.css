@@ -1,3 +1,6 @@
+#introduction {
+  padding-top: 50px;
+}
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
 }
@@ -17,7 +20,7 @@
 #introduction #circle {
   display: none;
   position: fixed;
-  top: 235px;
+  top: 225px;
   z-index: 100;
   width: 250px;
   height: 250px;
