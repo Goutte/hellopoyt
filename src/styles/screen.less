@@ -3,6 +3,7 @@
 @import "reset";
 @import "normalize";
 @import "mixins";
+@import "spinner";
 @import "introduction";
 @import "portfolio";
 @import "information";
@@ -26,6 +27,8 @@ a {
 hr {
   width: @widthContainer;
   margin-top: 60px;
+  border-bottom: 0;
+  border-top: 1px solid ligthen(@colorBlack, 10%) !important;
 }
 
 
@@ -114,7 +117,7 @@ header {
 
 //// CONTAINER
 body > .container {
-
+  opacity: 0;
 }
 
 

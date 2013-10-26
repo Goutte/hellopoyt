@@ -25,6 +25,16 @@
 <body>
 
 {% include './header.twig' %}
+
+<div id="bowlG">
+    <div id="bowl_ringG">
+        <div class="ball_holderG">
+            <div class="ballG">
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     {{ content }}
     {% include './footer.twig' %}
@@ -35,31 +45,35 @@
 <script type="text/javascript" src="scripts/vendor/skrollr.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
-    jQuery().ready(function () {
+    jQuery(document).ready(function ($) {
 
         // BLACK CIRCLE
-        var $circle = jQuery('#circle');
+        var $circle = $('#circle');
         var centerizeCircle = function(){
-            var widthWindow = jQuery(window).width();
+            var widthWindow = $(window).width();
+            var heightWindow = $(window).height();
             $circle.css('left', (widthWindow - $circle.width())/2);
+            $circle.css('top',  (heightWindow - $circle.height())/2);
         };
 
-        jQuery(window).on('resize', centerizeCircle);
+        $(window).on('resize', centerizeCircle);
         centerizeCircle();
 
         $circle.show();
 
+
+        // INTRODUCTION BG IMAGES
         var updateIntroRows = function(){
-            var heightWindow = jQuery(window).height();
-            jQuery("#introduction .row").height(heightWindow);
+            var heightWindow = $(window).height();
+            $("#introduction .row").height(heightWindow);
+            $("#introduction .row.space").height(heightWindow*5);
         };
 
-        jQuery(window).on('resize', updateIntroRows);
+        $(window).on('resize', updateIntroRows);
         updateIntroRows();
 
 
         // SKROLLR
-
         skrollr.init({
             smoothScrolling: true
             ,forceHeight: false
@@ -72,6 +86,11 @@
 //            }
 //        }
         });
+
+
+        // SPINNER
+        $("#bowlG").hide();
+        $("body > .container").css('opacity',1.0);
 
     });
 

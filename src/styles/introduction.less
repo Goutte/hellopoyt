@@ -35,19 +35,21 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
 
-    position: relative;
+    position: fixed;
     z-index: 10;
   }
 
-//  .row.fake {
-//    position: static;
-//  }
+  .row.space {
+    position: inherit !important;
+    //height: 500%;
+  }
 
   #circle {
     display: none;
 
     position: fixed;
-    top: @heightHeader + @heightIntroRow/2 - @circleRadius; // 235px, overriden by skrollr
+    //top: @heightHeader + @heightIntroRow/2 - @circleRadius; // 235px, overriden by skrollr
+    top: -2 * @circleRadius;
     z-index: 100;
 
     width:  @circleRadius * 2;
