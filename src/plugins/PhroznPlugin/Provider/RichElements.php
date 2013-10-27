@@ -37,11 +37,11 @@ class RichElements
         }
 
         // fixme: mocking multiple elements, REMOVE FOR PROD
-        $elements = array_merge(
-            $elements, $elements,
-            $elements, $elements,
-            $elements, $elements
-        );
+//        $elements = array_merge(
+//            $elements, $elements,
+//            $elements, $elements,
+//            $elements, $elements
+//        );
 
         return $elements;
     }

@@ -14,7 +14,7 @@
     <meta name="author" content="https://plus.google.com/118248552379361137285">
     <link rel="author" href="https://plus.google.com/118248552379361137285">
 
-    <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="scripts/modernizr-2.6.2.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -41,10 +41,11 @@
 </div>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script type="text/javascript" src="scripts/vendor/skrollr.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="scripts/skrollr.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
+
     jQuery(document).ready(function ($) {
 
         // BLACK CIRCLE
@@ -74,18 +75,27 @@
 
 
         // SKROLLR
-        skrollr.init({
-            smoothScrolling: true
-            ,forceHeight: false
-//        ,easing: {
-//            vibrate: function(p) {
-//                return Math.sin(p * 10 * Math.PI);
-//            },
-//            polar: function(p) {
-//                return 1 - (p*p);
-//            }
-//        }
+        var sk = skrollr.init({
+            smoothScrolling: true,
+            forceHeight: false
         });
+        setTimeout(function(){
+            skrollr.menu.init(sk);
+        }, 300); // timeout is not cool
+
+
+        // PROJECT DETAILS
+        $("#portfolio > a").on("click", function(e){
+            var $target = $($(this).attr('href'));
+            //$target.show();
+            $target.fadeIn();
+        });
+        $("#details a.buttons.exit").on("click", function(e){
+            var $target = $(this).parents('.detail');
+            //$target.hide();
+            $target.fadeOut();
+        });
+
 
         // CAROUSELS
         $("#details .carousel").tinycarousel();

@@ -98,11 +98,11 @@ providers:
 
 
 {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
-<section id="portfolio">
+<section id="portfolio" data-menu-offset="-60">
 
 {% for project in this.providers.all_projects %}
 
-    <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}">
+    <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}" class="project_thumbnail" data-menu-offset="-50">
         <article
             data-0000-bottom-top="opacity: 0.0"
             data--300-bottom-top="opacity: 1.0;"
@@ -128,7 +128,7 @@ providers:
 
 {% for project in this.providers.all_projects %}
 
-    <div id="detail-{{ project.slug }}" class="detail">
+    <div id="detail-{{ project.slug }}" class="detail" data-menu-offset="-50">
 
         <div class="container">
 
@@ -155,7 +155,7 @@ providers:
 
                 <hr>
 
-                <a class="buttons exit" href="#"></a>
+                <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
 
                 <div class="nav">
                     <a class="buttons prev" href="#"></a>
@@ -174,7 +174,7 @@ providers:
 
 
 {## INFORMATION ABOUT HELLOPOYT #}
-<section id="information">
+<section id="information" data-menu-offset="-50">
 
     <div class="col_left">
         <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""

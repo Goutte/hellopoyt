@@ -581,12 +581,16 @@ table {
   color: #c0c0c0;
 }
 #details .detail {
+  display: none;
   background-color: #efefef;
   margin: 40px auto;
   padding: 10px 0 30px 0;
   -moz-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
   -webkit-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
   box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
+}
+#details .detail.visible {
+  display: block;
 }
 #details .detail .container {
   width: 960px;
@@ -793,7 +797,7 @@ a {
 }
 hr {
   width: 980px;
-  margin: 0;
+  margin: 0 auto;
   border-bottom: 0;
   border-top: 1px solid ligthen(#000,10%) !important;
 }
@@ -806,6 +810,10 @@ hr {
   background: #1a1a1a;
   color: #e6e6e6;
   text-shadow: none;
+}
+.anchor {
+  padding-top: 50px;
+  margin-top: -50px;
 }
 header {
   position: fixed;
