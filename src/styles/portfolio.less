@@ -1,6 +1,16 @@
 @import "configuration";
 @import "mixins";
 
+
+
+@widthDetailImg:  940px;
+@heightDetailImg: 440px;
+@borderThickness: 10px;
+
+@colorShadow: fadeout(@colorBlack,75%);
+
+
+
 #portfolio {
   margin: 50px auto 0 auto;
 
@@ -30,11 +40,7 @@
   }
 }
 
-@widthDetailImg:  940px;
-@heightDetailImg: 440px;
-@borderThickness: 10px;
 
-@colorShadow: fadeout(@colorBlack,75%);
 
 #details {
 
@@ -127,15 +133,21 @@
       background-repeat: no-repeat;
       background-image: url('../media/img/portfolio/sprite-arrows.png');
 
-      .smooth;
+      .slick;
 
       &.prev {
         float: left;
         background-position: 0 center;
+        &:hover, &:focus {
+          background-position: -5px center;
+        }
       }
       &.next {
         float: right;
         background-position: -44px center;
+        &:hover, &:focus {
+          background-position: -39px center;
+        }
       }
       &.exit {
         float: right;
@@ -143,6 +155,12 @@
 
         margin-top: 25px;
         margin-right: 5px;
+        &:hover, &:focus {
+          transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+        }
       }
       &.link {
         float: right;

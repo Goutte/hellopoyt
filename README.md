@@ -2,8 +2,6 @@
 DEV BLACKBOARD
 ==============
 
-- Anchor scroll
-- Project details.
 - Secret URL for re-generation.
 
 

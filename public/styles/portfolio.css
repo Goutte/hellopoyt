@@ -22,6 +22,13 @@
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.slick {
+  -webkit-transition: all 0.3s ease-in-out;
+  -khtml-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 .background-image {
   background-position: center center;
   background-repeat: no-repeat;
@@ -112,25 +119,40 @@
   background-color: #000;
   background-repeat: no-repeat;
   background-image: url('../media/img/portfolio/sprite-arrows.png');
-  -webkit-transition: all 0.5s ease-in-out;
-  -khtml-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -khtml-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #details .carousel .buttons.prev {
   float: left;
   background-position: 0 center;
 }
+#details .carousel .buttons.prev:hover,
+#details .carousel .buttons.prev:focus {
+  background-position: -5px center;
+}
 #details .carousel .buttons.next {
   float: right;
   background-position: -44px center;
+}
+#details .carousel .buttons.next:hover,
+#details .carousel .buttons.next:focus {
+  background-position: -39px center;
 }
 #details .carousel .buttons.exit {
   float: right;
   background-position: -88px center;
   margin-top: 25px;
   margin-right: 5px;
+}
+#details .carousel .buttons.exit:hover,
+#details .carousel .buttons.exit:focus {
+  transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 #details .carousel .buttons.link {
   float: right;
