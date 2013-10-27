@@ -35,6 +35,7 @@
 #information p {
   font-size: 0.95em;
   text-align: justify;
+  padding-right: 10px;
 }
 #information p.second {
   color: #a6a6a6;

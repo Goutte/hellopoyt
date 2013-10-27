@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="styles/screen.css">
 
 </head>
-<body>
+<body id="skrollr-body">
 
 {% include './header.twig' %}
 
@@ -76,6 +76,7 @@
 
         // SKROLLR
         var sk = skrollr.init({
+            mobileCheck: false,
             smoothScrolling: true,
             forceHeight: false
         });

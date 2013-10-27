@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="styles/screen.css">
 
 </head>
-<body>
+<body id="skrollr-body">
 
 <header>
     <div class="container">
@@ -475,6 +475,7 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
         // SKROLLR
         var sk = skrollr.init({
+            mobileCheck: false,
             smoothScrolling: true,
             forceHeight: false
         });
