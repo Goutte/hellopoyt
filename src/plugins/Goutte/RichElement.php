@@ -74,6 +74,8 @@ class RichElement {
         $this->setDir($dir);
         $this->setRootDir($rootDir);
 
+        $this->setSlug($dir->getBasename());
+
         $it = new \DirectoryIterator($dir->getPathname());
         foreach ($it as $file) {
             if ($file->isFile() && $file->isReadable()) {

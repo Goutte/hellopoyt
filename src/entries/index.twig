@@ -1,3 +1,5 @@
+# This page will be embedded as `{{ content }}` in the layout defined below
+
 layout: default.twig
 providers:
     all_projects:
@@ -95,29 +97,83 @@ providers:
 </section>
 
 
+{## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
 <section id="portfolio">
 
-    {% for project in this.providers.all_projects %}
+{% for project in this.providers.all_projects %}
 
-    <article
-        data-0000-bottom-top="opacity: 0.0"
-        data--300-bottom-top="opacity: 1.0;"
-    >
-        <figure>
-            <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
-            <figcaption>
-                <span class="title">{{ project.title }}</span>
-                <br>
-                <span class="client">- {{ project.client }} -</span>
-            </figcaption>
-        </figure>
-    </article>
+    <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}">
+        <article
+            data-0000-bottom-top="opacity: 0.0"
+            data--300-bottom-top="opacity: 1.0;"
+        >
+            <figure>
+                <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
+                <figcaption>
+                    <span class="title">{{ project.title }}</span>
+                    <br>
+                    <span class="client">- {{ project.client }} -</span>
+                </figcaption>
+            </figure>
+        </article>
+    </a>
 
-    {% endfor %}
+{% endfor %}
 
 </section>
 
 
+{## DETAILS OF EACH PROJECT #}
+<section id="details">
+
+{% for project in this.providers.all_projects %}
+
+    <div id="detail-{{ project.slug }}" class="detail">
+
+        <div class="container">
+
+            <h3>{{ project.title }}</h3>
+
+            <div class="carousel">
+                <div class="viewport">
+                    <ul class="overview">
+                        {% for image in project.images %}
+                            <li><img src="{{ image }}" alt=""></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="infos">
+                    <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
+
+                    <dl>
+                        <dt>Mission</dt> : <dd>{{ project.mission }}</dd> <br>
+                        <dt>Client</dt> : <dd>{{ project.client }}</dd> <br>
+                        <dt>Agency</dt> : <dd>{{ project.agency }}</dd> <br>
+                    </dl>
+                </div>
+
+                <hr>
+
+                <a class="buttons exit" href="#"></a>
+
+                <div class="nav">
+                    <a class="buttons prev" href="#"></a>
+                    <a class="buttons next" href="#"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endfor %}
+
+</section>
+
+
+{## INFORMATION ABOUT HELLOPOYT #}
 <section id="information">
 
     <div class="col_left">
@@ -151,6 +207,7 @@ providers:
 <hr class="clear">
 
 
+{## CONTACT INFORMATION #}
 <section id="contact">
 
     <h2>Contact</h2>

@@ -2,8 +2,9 @@
 DEV BLACKBOARD
 ==============
 
-Project details.
-Secret URL for re-generation.
+- Anchor scroll
+- Project details.
+- Secret URL for re-generation.
 
 
 HOW TO INSTALL
@@ -36,7 +37,8 @@ HOW TO USE
 Change intro images
 -------------------
 
-Look into `src/styles/introduction.less`, from row01 to row05. Easy !
+Change the 5 images `src/media/img/introduction/XX.jpg`. Easy !
+The related CSS is in `src/styles/introduction.less`.
 
 Create new Project
 ------------------
@@ -49,6 +51,7 @@ Inside this folder, create the file `description.yml`, with a content looking li
 
 ``` description.yml
 title: Ubisoft 25 Years
+subtitle: The Pie's The Limit
 mission: Art Direction / Illustration
 client: Ubisoft
 agency: Diplomatic-Cover
@@ -71,8 +74,8 @@ Just update the files, and then re-generate the website.
 (Re)Generate the Website
 ------------------------
 
-The sources of the website are in the folder `src/`, and the output will be written in `public`.
-Only the latter should be available on the server.
+The sources of the website are in the folder `src/`, and the output will be written in `public/`.
+Only the latter should be available on the server, but you don't need to care about this.
 
 
 ### Dev
@@ -105,11 +108,3 @@ https://github.com/Prinzhorn/skrollr
 
 Edit `src/entries/index.twig` and `src/styles/introduction.less`.
 
-
-PITFALLS
-========
-
-Phrozn plugin's `projectPath` logic require a `.phrozn` folder at the root of the project.
-This is dumb, IMNSHO, as I'd rather use explicit `src` and `public` folders as respectively in and out.
-Which I do, and therefore observed broken behavior.
-**So,** I hotfixed Phrozn, removing usage of `Phrozn\Path\Project`.

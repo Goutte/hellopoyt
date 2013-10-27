@@ -6,30 +6,30 @@
 
 #introduction {
 
-  padding-top: @heightHeader;
+  //padding-top: @heightHeader;
 
   .row01 {
     background-image: url('../media/img/introduction/01.jpg');
   }
 
   .row02 {
-    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+    background-image: url('../media/img/introduction/02.jpg');
   }
 
   .row03 {
-    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+    background-image: url('../media/img/introduction/03.jpg');
   }
 
   .row04 {
-    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+    background-image: url('../media/img/introduction/04.jpg');
   }
 
   .row05 {
-    background-image: url('../media/img/introduction/01.jpg'); // todo: change this !
+    background-image: url('../media/img/introduction/05.jpg');
   }
 
   .row {
-    height: @heightIntroRow; // overriden by javascript to window.height()
+    height: 0; // overriden by js to window.height()
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -41,22 +41,22 @@
 
   .row.space {
     position: inherit !important;
-    //height: 500%;
   }
 
   #circle {
     display: none;
 
     position: fixed;
-    //top: @heightHeader + @heightIntroRow/2 - @circleRadius; // 235px, overriden by skrollr
-    top: -2 * @circleRadius;
+    top: -2 * @circleRadius; // overriden by js
     z-index: 100;
 
     width:  @circleRadius * 2;
     height: @circleRadius * 2;
 
     overflow: visible;
-    border-radius: 50%;
+    border-radius:         50%;
+    -moz-border-radius:    50%;
+    -webkit-border-radius: 50%;
     background-color: @colorBlack;
 
     .circle_content {

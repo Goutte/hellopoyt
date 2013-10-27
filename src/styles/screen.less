@@ -26,7 +26,8 @@ a {
 
 hr {
   width: @widthContainer;
-  margin-top: 60px;
+  //margin-top: 60px;
+  margin: 0;
   border-bottom: 0;
   border-top: 1px solid ligthen(@colorBlack, 10%) !important;
 }
@@ -52,6 +53,7 @@ hr {
 header {
 
   position: fixed;
+  top: 0;
   z-index: 50;
   height: @heightHeader;
   width: 100%;
@@ -117,7 +119,7 @@ header {
 
 //// CONTAINER
 body > .container {
-  opacity: 0;
+  opacity: 0; // js will set this to 1 when DOM is ready
 }
 
 

@@ -1,23 +1,20 @@
-#introduction {
-  padding-top: 50px;
-}
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
 }
 #introduction .row02 {
-  background-image: url('../media/img/introduction/01.jpg');
+  background-image: url('../media/img/introduction/02.jpg');
 }
 #introduction .row03 {
-  background-image: url('../media/img/introduction/01.jpg');
+  background-image: url('../media/img/introduction/03.jpg');
 }
 #introduction .row04 {
-  background-image: url('../media/img/introduction/01.jpg');
+  background-image: url('../media/img/introduction/04.jpg');
 }
 #introduction .row05 {
-  background-image: url('../media/img/introduction/01.jpg');
+  background-image: url('../media/img/introduction/05.jpg');
 }
 #introduction .row {
-  height: 600px;
+  height: 0;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -37,6 +34,8 @@
   height: 250px;
   overflow: visible;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   background-color: #000;
 }
 #introduction #circle .circle_content {
