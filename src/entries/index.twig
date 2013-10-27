@@ -1,4 +1,5 @@
-# This page will be embedded as `{{ content }}` in the layout defined below
+# This page will be embedded as `{{ content }}` in the layout defined below.
+# This is where you'll customize the animations, see skrollr doc for more details.
 
 layout: default.twig
 providers:
@@ -8,16 +9,13 @@ providers:
 
 ---
 
+{## INTRODUCTION WITH 5 FULLSCREEN IMAGES #}
 <section id="introduction">
 
     <div id="circle"
          data-anchor-target="#portfolio"
          data--10p-bottom-top="transform: scale(1.0);"
          data--60p-bottom-top="transform: scale(0.0);"
-         {#data-140p="transform: rotateX(0deg);"#}
-         {#data-160p="transform: rotateX(180deg);"#}
-         {#data-240p="transform: rotateX(180deg);"#}
-         {#data-260p="transform: rotateX(0deg);"#}
          data-140p="transform: scaleY(1.0);"
          data-150p="transform: scaleY(0.0);"
          data-160p="transform: scaleY(1.0);"
@@ -79,23 +77,23 @@ providers:
     ></div>
     <div class="row row02"
          data-000p="top: 100%; display: block;"
-         data-100p="top: 0px;"
+         data-100p="top: 0%;"
          data-200p="display: none;"
     ></div>
     <div class="row row03"
          data-100p="top: 100%; display: block;"
-         data-200p="top: 0px;"
+         data-200p="top: 0%;"
          data-300p="display: none;"
     ></div>
     <div class="row row04"
          data-200p="top: 100%; display: block;"
-         data-300p="top: 0px;"
+         data-300p="top: 0%;"
          data-400p="display: none;"
     ></div>
     <div class="row row05"
          data-300p="top:  100%; display: block;"
-         data-400p="top:   0px;"
-         data-500p="top: -1000%; display: none;"
+         data-400p="top:   0%;"
+         data-500p="top: -100%; display: none;"
     ></div>
 
     <div class="row space"></div>
@@ -152,11 +150,11 @@ providers:
                 <div class="infos">
                     <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
 
-                    <dl>
-                        <dt>Mission</dt> : <dd>{{ project.mission }}</dd> <br>
-                        <dt>Client</dt> : <dd>{{ project.client }}</dd> <br>
-                        <dt>Agency</dt> : <dd>{{ project.agency }}</dd> <br>
-                    </dl>
+                    <ul>
+                        <li><span class="key">Mission</span> : <span class="val">{{ project.mission }}</span></li>
+                        <li><span class="key">Client</span> : <span class="val">{{ project.client }}</span></li>
+                        <li><span class="key">Agency</span> : <span class="val">{{ project.agency }}</span></li>
+                    </ul>
                 </div>
 
                 <hr>
