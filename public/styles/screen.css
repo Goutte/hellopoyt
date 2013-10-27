@@ -622,18 +622,15 @@ table {
   -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
   box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
 }
-#details .carousel dl {
+#details .carousel ul {
   margin: 25px 0 25px 25px;
 }
-#details .carousel dl dt {
+#details .carousel ul li span.key {
   display: inline-block;
   width: 60px;
   font-size: 0.8;
   font-weight: bold;
   color: #a6a6a6;
-}
-#details .carousel dl dd {
-  display: inline;
 }
 #details .carousel .nav {
   width: 110px;
