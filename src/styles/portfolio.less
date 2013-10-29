@@ -81,17 +81,28 @@
       letter-spacing: -1px;
     }
 
-  }
-
-  .carousel {
+//  }
+//
+//  .carousel {
     //padding-left: 10px;
 
     @colorShadow2: fadeout(@colorShadow,10%);
-    .viewport {
-      width:  @widthDetailImg + @borderThickness*2;
-      height: @heightDetailImg + @borderThickness*2;
-      overflow: hidden;
-      position: relative;
+
+//    .viewport {
+//      width:  @widthDetailImg + @borderThickness*2;
+//      height: @heightDetailImg + @borderThickness*2;
+//      overflow: hidden;
+//      position: relative;
+//
+//      -webkit-box-shadow: 3px 3px 5px 0 @colorShadow2;
+//      -moz-box-shadow:    3px 3px 5px 0 @colorShadow2;
+//      box-shadow:         3px 3px 5px 0 @colorShadow2;
+//    }
+
+    img.screenshot {
+      border: @borderThickness solid @colorWhite;
+      height: @heightDetailImg;
+      width:  @widthDetailImg;
 
       -webkit-box-shadow: 3px 3px 5px 0 @colorShadow2;
       -moz-box-shadow:    3px 3px 5px 0 @colorShadow2;
@@ -113,88 +124,102 @@
       }
     }
 
-    .nav {
-      width: 110px;
-      margin: 25px auto 0 auto;
-      overflow: auto;
-    }
-
-    .buttons {
-      display: block;
-
-      width:  44px;
-      height: 44px;
-
-      border-radius:         50%;
-      -moz-border-radius:    50%;
-      -webkit-border-radius: 50%;
-
-      background-color: @colorBlack;
-      background-repeat: no-repeat;
-      background-image: url('../media/img/portfolio/sprite-arrows.png');
-
-      .slick;
-
-      &.prev {
-        float: left;
-        background-position: 0 center;
-        &:hover, &:focus {
-          background-position: -5px center;
-        }
+    .additional-screenshots {
+      padding-top: 25px;
+      img {
+        margin-bottom: 25px;
       }
-      &.next {
-        float: right;
-        background-position: -44px center;
-        &:hover, &:focus {
-          background-position: -39px center;
-        }
-      }
-      &.exit {
-        float: right;
-        background-position: -88px center;
-
-        margin-top: 25px;
-        margin-right: 5px;
-        &:hover, &:focus {
-          transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
-        }
-      }
-      &.link {
-        float: right;
-        width:  55px;
-        height: 55px;
-        background: @colorBlack url('../media/img/portfolio/link.png') no-repeat center center;
-        font-size: 0;
-      }
-
-      &.disable {
-        opacity: 0.17;
-        pointer-events: none;
-      }
-
     }
 
 
 
-    .overview {
-      list-style: none;
-      position: absolute;
-      padding: 0;
-      margin: 0;
-      left: 0;
-      top: 0;
-    }
 
-    .overview li {
-      float: left;
-      margin: 0 42px 0 0;
-      border: @borderThickness solid @colorWhite;
-      height: @heightDetailImg;
-      width: @widthDetailImg;
-    }
+
+//    .overview {
+//      list-style: none;
+//      position: absolute;
+//      padding: 0;
+//      margin: 0;
+//      left: 0;
+//      top: 0;
+//    }
+
+//    .overview li {
+//      float: left;
+//      margin: 0 42px 0 0;
+//      border: @borderThickness solid @colorWhite;
+//      height: @heightDetailImg;
+//      width: @widthDetailImg;
+//    }
   }
+
+
+
+  .nav {
+    width: 110px;
+    margin: 25px auto 0 auto;
+    overflow: auto;
+  }
+
+  .buttons {
+    display: block;
+
+    width:  44px;
+    height: 44px;
+
+    border-radius:         50%;
+    -moz-border-radius:    50%;
+    -webkit-border-radius: 50%;
+
+    background-color: @colorBlack;
+    background-repeat: no-repeat;
+    background-image: url('../media/img/portfolio/sprite-arrows.png');
+
+    .slick;
+
+    &.prev {
+      float: left;
+      background-position: 0 center;
+      &:hover, &:focus {
+        background-position: -5px center;
+      }
+    }
+    &.next {
+      float: right;
+      background-position: -44px center;
+      &:hover, &:focus {
+        background-position: -39px center;
+      }
+    }
+    &.exit {
+      float: right;
+      background-position: -88px center;
+
+      margin-top: 25px;
+      margin-right: 5px;
+      &:hover, &:focus {
+        transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+    }
+    &.link {
+      float: right;
+      width:  55px;
+      height: 55px;
+      background: @colorBlack url('../media/img/portfolio/link.png') no-repeat center center;
+      font-size: 0;
+    }
+
+    &.disabled {
+      opacity: 0.17;
+      pointer-events: none;
+    }
+
+  }
+
+
+
 
 }

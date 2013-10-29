@@ -2000,6 +2000,15 @@
         jumpStraightToHash();
     };
 
+    skrollr.menu.scrollTo = function(hash) {
+        if (hash.substr(0,1) != '#') hash = '#' + hash;
+        var link = document.querySelector('a[href="' + hash + '"]');
+
+        if(link) {
+            handleLink(link, true);
+        }
+    };
+
     //Private reference to the initialized skrollr.
     var _skrollrInstance;
 

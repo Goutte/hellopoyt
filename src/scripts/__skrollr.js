@@ -1,4 +1,8 @@
 /*!
+
+    SOURCE IS NOW IN plugins.js
+
+
  * skrollr core
  *
  * Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr

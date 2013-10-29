@@ -130,43 +130,51 @@ providers:
 {## DETAILS OF EACH PROJECT #}
 <section id="details">
 
+
+
+
 {% for project in this.providers.all_projects %}
 
-    <div id="detail-{{ project.slug }}" class="detail" data-menu-offset="-50">
+    <div id="detail-{{ project.slug }}" data-project-slug="{{ project.slug }}" class="detail" data-menu-offset="-50">
 
         <div class="container">
 
             <h3>{{ project.title }}</h3>
 
-            <div class="carousel">
-                <div class="viewport">
-                    <ul class="overview">
-                        {% for image in project.images %}
-                            <li><img src="{{ image }}" alt=""></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+        {% if project.images is not empty %}
+            <img class="screenshot" src="{{ project.images[0] }}" alt="">
+        {% endif %}
 
-                <div class="infos">
-                    <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
+            <div class="infos">
+                <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
 
-                    <ul>
-                        <li><span class="key">Mission</span> : {{ project.mission }}</li>
-                        <li><span class="key">Client</span> : {{ project.client }}</li>
-                        <li><span class="key">Agency</span> : {{ project.agency }}</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
-
-                <div class="nav">
-                    <a class="buttons prev" href="#"></a>
-                    <a class="buttons next" href="#"></a>
-                </div>
-
+                <ul>
+                    <li><span class="key">Mission</span> : {{ project.mission }}</li>
+                    <li><span class="key">Client</span> : {{ project.client }}</li>
+                    <li><span class="key">Agency</span> : {{ project.agency }}</li>
+                </ul>
             </div>
+
+        {% if project.images|length > 1 %}
+            <hr>
+            <div class="additional-screenshots">
+            {% for image in project.images %}
+            {% if not loop.first %}
+                <img class="screenshot" src="{{ image }}" alt="">
+            {% endif %}
+            {% endfor %}
+            </div>
+        {% endif %}
+
+            <hr>
+
+            <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
+
+            <div class="nav">
+                <a class="buttons prev {{ loop.first ? 'disabled' }}" href="#"></a>
+                <a class="buttons next {{ loop.last ? 'disabled' }}" href="#"></a>
+            </div>
+
 
         </div>
 
