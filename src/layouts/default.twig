@@ -42,7 +42,6 @@
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="scripts/jquery-1.10.2.min.js"><\/script>')</script>
-{#<script type="text/javascript" src="scripts/skrollr.js"></script>#}
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
 
@@ -88,11 +87,15 @@
         // PROJECT DETAILS
         $("#portfolio > a").on("click", function(e){
             var $target = $($(this).attr('href'));
-            $target.fadeIn();
+            $target.fadeIn(400, function(){
+                sk.refresh();
+            });
         });
         $("#details a.buttons.exit").on("click", function(e){
             var $target = $(this).parents('.detail');
-            $target.fadeOut();
+            $target.fadeOut(400, function(){
+                sk.refresh();
+            });
         });
         $("#details a.buttons.next").on("click", function(e){
             e.preventDefault();
@@ -101,7 +104,9 @@
 
             if ($next.length) {
                 $target.fadeOut(250, function(){
-                    $next.fadeIn(250);
+                    $next.fadeIn(250, function(){
+                        sk.refresh();
+                    });
                     skrollr.menu.scrollTo($next.attr('id'));
                 });
             }
@@ -113,7 +118,9 @@
 
             if ($prev.length) {
                 $target.fadeOut(250, function(){
-                    $prev.fadeIn(250);
+                    $prev.fadeIn(250, function(){
+                        sk.refresh();
+                    });
                     skrollr.menu.scrollTo($prev.attr('id'));
                 });
             }

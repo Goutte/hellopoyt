@@ -107,6 +107,7 @@
         ></div>
     </div>
 
+    <div id="row-container">
     <div class="row row01"
          data-000p="display: block;"
          data-100p="display: none;"
@@ -131,6 +132,7 @@
          data-400p="top:   0%;"
          data-500p="top: -100%; display: none;"
     ></div>
+    </div>
 
     <div class="row space"></div>
 
@@ -223,7 +225,6 @@
 
             <h3>BBC Short Film Education</h3>
 
-                                                                                                                                                                            
                     <img class="screenshot" src="projects/010-bbc-short-film-education/01.jpg" alt="">
         
             <div class="infos">
@@ -262,7 +263,6 @@
 
             <h3>Ubisoft 25 Years</h3>
 
-                                                                                                                                                                            
                     <img class="screenshot" src="projects/020-ubisoft-25-years/01.jpg" alt="">
         
             <div class="infos">
@@ -302,7 +302,6 @@
 
             <h3>Driver Game Icons</h3>
 
-                                                                                                                                                                            
                     <img class="screenshot" src="projects/030-driver-game-icons/01.jpg" alt="">
         
             <div class="infos">
@@ -341,7 +340,6 @@
 
             <h3>Flyers</h3>
 
-                                                                                                                                                                            
                     <img class="screenshot" src="projects/040-flyers-rock-band/01.jpg" alt="">
         
             <div class="infos">
@@ -486,11 +484,15 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
         // PROJECT DETAILS
         $("#portfolio > a").on("click", function(e){
             var $target = $($(this).attr('href'));
-            $target.fadeIn();
+            $target.fadeIn(400, function(){
+                sk.refresh();
+            });
         });
         $("#details a.buttons.exit").on("click", function(e){
             var $target = $(this).parents('.detail');
-            $target.fadeOut();
+            $target.fadeOut(400, function(){
+                sk.refresh();
+            });
         });
         $("#details a.buttons.next").on("click", function(e){
             e.preventDefault();
@@ -499,7 +501,9 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
             if ($next.length) {
                 $target.fadeOut(250, function(){
-                    $next.fadeIn(250);
+                    $next.fadeIn(250, function(){
+                        sk.refresh();
+                    });
                     skrollr.menu.scrollTo($next.attr('id'));
                 });
             }
@@ -511,15 +515,14 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
             if ($prev.length) {
                 $target.fadeOut(250, function(){
-                    $prev.fadeIn(250);
+                    $prev.fadeIn(250, function(){
+                        sk.refresh();
+                    });
                     skrollr.menu.scrollTo($prev.attr('id'));
                 });
             }
         });
 
-
-        // CAROUSELS
-        //$("#details .carousel").tinycarousel();
 
         // SPINNER
         $("#bowlG").hide();

@@ -6,8 +6,6 @@
 
 #introduction {
 
-  //padding-top: @heightHeader;
-
   .row01 {
     background-image: url('../media/img/introduction/01.jpg');
   }
@@ -41,6 +39,11 @@
 
   .row.space {
     position: inherit !important;
+    // height overriden by js to 5 times window.height()
+  }
+
+  #row_container {
+    height: 0; // overriden by js to window.height()
   }
 
   #circle {

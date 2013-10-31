@@ -25,6 +25,9 @@
 #introduction .row.space {
   position: inherit !important;
 }
+#introduction #row_container {
+  height: 0;
+}
 #introduction #circle {
   display: none;
   position: fixed;
