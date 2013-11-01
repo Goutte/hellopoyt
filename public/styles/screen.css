@@ -509,6 +509,7 @@ table {
 }
 #introduction .row.space {
   position: inherit !important;
+  background-color: inherit !important;
 }
 #introduction #row_container {
   height: 0;
