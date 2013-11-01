@@ -102,142 +102,143 @@ providers:
 
 </section>
 
+{# FOR MOBILES, CONTAINER FOR STATIC ELEMENTS #}
+<div id="skrollr-body">
 
-{## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
-<section id="portfolio" data-menu-offset="-60">
+    {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
+    <section id="portfolio" data-menu-offset="-60">
 
-{% for project in this.providers.all_projects %}
+    {% for project in this.providers.all_projects %}
 
-    <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}" class="project_thumbnail" data-menu-offset="-50">
-        <article
-            data-0000-bottom-top="opacity: 0.0"
-            data--300-bottom-top="opacity: 1.0;"
-        >
-            <figure>
-                <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
-                <figcaption>
-                    <span class="title">{{ project.title }}</span>
-                    <br>
-                    <span class="client">- {{ project.client }} -</span>
-                </figcaption>
-            </figure>
-        </article>
-    </a>
+        <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}" class="project_thumbnail" data-menu-offset="-50">
+            <article
+                data-0000-bottom-top="opacity: 0.0"
+                data--300-bottom-top="opacity: 1.0;"
+            >
+                <figure>
+                    <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
+                    <figcaption>
+                        <span class="title">{{ project.title }}</span>
+                        <br>
+                        <span class="client">- {{ project.client }} -</span>
+                    </figcaption>
+                </figure>
+            </article>
+        </a>
 
-{% endfor %}
+    {% endfor %}
 
-</section>
-
-
-{## DETAILS OF EACH PROJECT #}
-<section id="details">
+    </section>
 
 
+    {## DETAILS OF EACH PROJECT #}
+    <section id="details">
 
+    {% for project in this.providers.all_projects %}
 
-{% for project in this.providers.all_projects %}
+        <div id="detail-{{ project.slug }}" data-project-slug="{{ project.slug }}" class="detail" data-menu-offset="-50">
 
-    <div id="detail-{{ project.slug }}" data-project-slug="{{ project.slug }}" class="detail" data-menu-offset="-50">
+            <div class="container">
 
-        <div class="container">
+                <h3>{{ project.title }}</h3>
 
-            <h3>{{ project.title }}</h3>
-
-        {% if project.images is not empty %}
-            <img class="screenshot" src="{{ project.images[0] }}" alt="">
-        {% endif %}
-
-            <div class="infos">
-                <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
-
-                <ul>
-                    <li><span class="key">Mission</span> : {{ project.mission }}</li>
-                    <li><span class="key">Client</span> : {{ project.client }}</li>
-                    <li><span class="key">Agency</span> : {{ project.agency }}</li>
-                </ul>
-            </div>
-
-        {% if project.images|length > 1 %}
-            <hr>
-            <div class="additional-screenshots">
-            {% for image in project.images %}
-            {% if not loop.first %}
-                <img class="screenshot" src="{{ image }}" alt="">
+            {% if project.images is not empty %}
+                <img class="screenshot" src="{{ project.images[0] }}" alt="">
             {% endif %}
-            {% endfor %}
+
+                <div class="infos">
+                    <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
+
+                    <ul>
+                        <li><span class="key">Mission</span> : {{ project.mission }}</li>
+                        <li><span class="key">Client</span> : {{ project.client }}</li>
+                        <li><span class="key">Agency</span> : {{ project.agency }}</li>
+                    </ul>
+                </div>
+
+            {% if project.images|length > 1 %}
+                <hr>
+                <div class="additional-screenshots">
+                {% for image in project.images %}
+                {% if not loop.first %}
+                    <img class="screenshot" src="{{ image }}" alt="">
+                {% endif %}
+                {% endfor %}
+                </div>
+            {% endif %}
+
+                <hr>
+
+                <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
+
+                <div class="nav">
+                    <a class="buttons prev {{ loop.first ? 'disabled' }}" href="#"></a>
+                    <a class="buttons next {{ loop.last ? 'disabled' }}" href="#"></a>
+                </div>
+
+
             </div>
-        {% endif %}
-
-            <hr>
-
-            <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
-
-            <div class="nav">
-                <a class="buttons prev {{ loop.first ? 'disabled' }}" href="#"></a>
-                <a class="buttons next {{ loop.last ? 'disabled' }}" href="#"></a>
-            </div>
-
 
         </div>
 
-    </div>
+    {% endfor %}
 
-{% endfor %}
-
-</section>
+    </section>
 
 
-{## INFORMATION ABOUT HELLOPOYT #}
-<section id="information" data-menu-offset="-50">
+    {## INFORMATION ABOUT HELLOPOYT #}
+    <section id="information" data-menu-offset="-50">
 
-    <div class="col_left">
-        <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""
-             data-anchor-target="#information"
-             data-00000-bottom-top="left: -600px; transform: rotateZ(-200deg);"
-             data--0600-bottom-top="left:  000px; transform: rotateZ(0deg);"
-             data-00000-top-bottom="left:  100px; transform: rotateZ(20deg);"
-        >
-        <img id="information_pola_front" src="media/img/information/pola-front.png" alt=""
-             data-anchor-target="#information"
-             data-00000-bottom-top="left: -600px; transform: rotateZ(-150deg);"
-             data--0600-bottom-top="left:  160px; transform: rotateZ(0deg);"
-             data-00000-top-bottom="left:  200px; transform: rotateZ(15deg);"
-        >
-    </div>
+        <div class="col_left">
+            <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""
+                 data-anchor-target="#information"
+                 data-00000-bottom-top="left: -600px; transform: rotateZ(-200deg);"
+                 data--0600-bottom-top="left:  000px; transform: rotateZ(0deg);"
+                 data-00000-top-bottom="left:  100px; transform: rotateZ(20deg);"
+            >
+            <img id="information_pola_front" src="media/img/information/pola-front.png" alt=""
+                 data-anchor-target="#information"
+                 data-00000-bottom-top="left: -600px; transform: rotateZ(-150deg);"
+                 data--0600-bottom-top="left:  160px; transform: rotateZ(0deg);"
+                 data-00000-top-bottom="left:  200px; transform: rotateZ(15deg);"
+            >
+        </div>
 
-    <div class="col_right">
-        <h2>Hellopoyt</h2>
-        <p class="first">
-            {{ this.hellopoyt.p1 }}
-        </p>
-        <p class="second">
-            {{ this.hellopoyt.p2 }}
-        </p>
-    </div>
+        <div class="col_right">
+            <h2>Hellopoyt</h2>
+            <p class="first">
+                {{ this.hellopoyt.p1 }}
+            </p>
+            <p class="second">
+                {{ this.hellopoyt.p2 }}
+            </p>
+        </div>
 
-</section>
-
-
-<hr class="clear">
+    </section>
 
 
-{## CONTACT INFORMATION #}
-<section id="contact">
+    <hr class="clear">
 
-    <h2>Contact</h2>
-    <nav>
-        <a id="contact_mail" href="{{ this.contact.mail }}">
-            <img src="media/img/contact/btn-mail.png" alt="Mail">
-            <span>mail</span>
-        </a>
-        <a id="contact_behance" href="{{ this.contact.behance }}">
-            <img src="media/img/contact/btn-behance.png" alt="Behance">
-            <span>behance</span>
-        </a>
-        <a id="contact_tumblr" href="{{ this.contact.tumblr }}">
-            <img src="media/img/contact/btn-tumblr.png" alt="Tumblr">
-            <span>tumblr</span>
-        </a>
-    </nav>
 
-</section>
+    {## CONTACT INFORMATION #}
+    <section id="contact">
+
+        <h2>Contact</h2>
+        <nav>
+            <a id="contact_mail" href="{{ this.contact.mail }}">
+                <img src="media/img/contact/btn-mail.png" alt="Mail">
+                <span>mail</span>
+            </a>
+            <a id="contact_behance" href="{{ this.contact.behance }}">
+                <img src="media/img/contact/btn-behance.png" alt="Behance">
+                <span>behance</span>
+            </a>
+            <a id="contact_tumblr" href="{{ this.contact.tumblr }}">
+                <img src="media/img/contact/btn-tumblr.png" alt="Tumblr">
+                <span>tumblr</span>
+            </a>
+        </nav>
+
+    </section>
+
+</div>

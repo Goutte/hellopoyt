@@ -486,6 +486,7 @@ table {
 }
 #introduction .row03 {
   background-image: url('../media/img/introduction/03.jpg');
+  background-attachment: fixed;
 }
 #introduction .row04 {
   background-image: url('../media/img/introduction/04.jpg');
@@ -498,7 +499,11 @@ table {
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   position: fixed;
   z-index: 10;
 }

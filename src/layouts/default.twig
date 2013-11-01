@@ -22,10 +22,12 @@
     <link rel="stylesheet" type="text/css" href="styles/screen.css">
 
 </head>
-<body id="skrollr-body">
+<body>
 
+{# HEADER #}
 {% include './header.twig' %}
 
+{# SPINNER #}
 <div id="bowlG">
     <div id="bowl_ringG">
         <div class="ball_holderG">
@@ -35,6 +37,7 @@
     </div>
 </div>
 
+{# CONTENT #}
 <div class="container">
     {{ content }}
     {% include './footer.twig' %}
@@ -87,7 +90,8 @@
         // PROJECT DETAILS
         $("#portfolio > a").on("click", function(e){
             var $target = $($(this).attr('href'));
-            $target.fadeIn(400, function(){
+            $('#details .detail').hide();
+            $target.fadeIn(500, function(){
                 sk.refresh();
             });
         });
