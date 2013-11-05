@@ -1,26 +1,21 @@
 
-DEV BLACKBOARD
-==============
-
-- Secret URL for re-generation.
-
-
-HOW TO INSTALL
-==============
-
-This is for devs only !
-Use [Composer](http://getcomposer.org).
-Then, generate the website.
-
-
 WHAT YOU NEED TO KNOW
 =====================
 
-The SOURCES of the website are under the `src/` folder.
-This is the folder where you will find EVERYTHING there is to change.
+On the FTP, there are two root folders :
+- `www` : will hold the static files, you should *never* change anything in here.
+          We don't have a choice, the server is configured to serve the files in the `www/` folder,
+          otherwise I'd have used the `hellopoyt/public` folder instead of copying it. No problem here.
+- `hellopoyt` : holds the whole project, whose directories are explained below.
 
-The generated HTML/CSS/JS will be in the `public/` folder.
+The SOURCES of the website are under the `src/` folder.
+This is the folder where you will find EVERYTHING there is to change.  <= IMPORTANT !
+
+I repeat : `src/` is EVERYTHING !
+
+The GENERATED HTML/CSS/JS will be in the `public/` folder.
 NEVER EVER change files in the `public/` folder as they will be OVERWRITTEN !
+The contents of `public/` will be copied to the root `www` folder.
 
 Other folders you don't care about :
 - `bin` : dev scripts you need not care about
@@ -72,9 +67,11 @@ Just update the files, and then re-generate the website.
 (Re)Generate the Website
 ------------------------
 
-The sources of the website are in the folder `src/`, and the output will be written in `public/`.
-Only the latter should be available on the server, but you don't need to care about this.
+The sources of the website are in the folder `src/`, and the output will be written in `public/` and copied to root `www/`.
 
+### Pat
+
+Visit http://hellopoyt.com/hellopoyt/generate.php
 
 ### Dev
 
@@ -83,14 +80,6 @@ Launch in CLI :
 ```
 bin/build
 ```
-
-### Prod
-
-Visit a certain (secret!) URL.
-It should auto-commit to a git repo, too !
-
-???
-
 
 HOW TO ANIMATE
 ==============
@@ -105,4 +94,14 @@ https://github.com/Prinzhorn/skrollr
 ---------
 
 Edit `src/entries/index.twig` and `src/styles/introduction.less`.
+Then, re-generate the website !
+
+
+
+HOW TO INSTALL
+==============
+
+This is for devs only !
+Use [Composer](http://getcomposer.org).
+Then, generate the website.
 
