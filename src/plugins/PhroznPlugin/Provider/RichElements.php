@@ -30,18 +30,15 @@ class RichElements
 
         $elements = array();
         $it = new \DirectoryIterator($this->getProjectPath().DIRECTORY_SEPARATOR.$folder);
+
         foreach ($it as $item) {
             if (!$item->isDot() && $item->isDir()) {
-                $elements[] = new RichElement($item, $inputRootDir);
+                $element = new RichElement($item, $inputRootDir);
+                $elements[$element->getSlug()] = $element;
             }
         }
 
-        // fixme: mocking multiple elements, REMOVE FOR PROD
-//        $elements = array_merge(
-//            $elements, $elements,
-//            $elements, $elements,
-//            $elements, $elements
-//        );
+        ksort($elements);
 
         return $elements;
     }
