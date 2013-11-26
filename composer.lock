@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b40240555e18388bee0d7fb7d93ab489",
+    "hash": "c348043e9210777d58cff462974285f4",
     "packages": [
         {
             "name": "farazdagi/phrozn",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Goutte/phrozn.git",
-                "reference": "9385fd1c1f02232dce8c6415e8cc8040528922fc"
+                "reference": "2cae86c4aacd9c734e6a21a09fb271889e264219"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Goutte/phrozn/zipball/9385fd1c1f02232dce8c6415e8cc8040528922fc",
-                "reference": "9385fd1c1f02232dce8c6415e8cc8040528922fc",
+                "url": "https://api.github.com/repos/Goutte/phrozn/zipball/2cae86c4aacd9c734e6a21a09fb271889e264219",
+                "reference": "2cae86c4aacd9c734e6a21a09fb271889e264219",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
             "support": {
                 "source": "https://github.com/Goutte/phrozn/tree/hellopoyt"
             },
-            "time": "2013-10-26 07:16:08"
+            "time": "2013-11-05 16:08:43"
         },
         {
             "name": "leafo/lessphp",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/textile/php-textile.git",
-                "reference": "280369bb6da49cd1797346fb986cff5a18730bd6"
+                "reference": "a78c8525b80a7ee90333fd1650b453edfe8a1982"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/textile/php-textile/zipball/280369bb6da49cd1797346fb986cff5a18730bd6",
-                "reference": "280369bb6da49cd1797346fb986cff5a18730bd6",
+                "url": "https://api.github.com/repos/textile/php-textile/zipball/a78c8525b80a7ee90333fd1650b453edfe8a1982",
+                "reference": "a78c8525b80a7ee90333fd1650b453edfe8a1982",
                 "shasum": ""
             },
             "require": {
@@ -186,7 +186,7 @@
             ],
             "description": "A lightweight markup language that takes (almost) plaintext and converts it into well formed HTML.",
             "homepage": "https://github.com/textile/php-textile",
-            "time": "2013-10-25 20:47:53"
+            "time": "2013-11-19 19:11:07"
         },
         {
             "name": "pear/archive_tar",
@@ -194,12 +194,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Archive_Tar.git",
-                "reference": "23341344e19bbab1056cf2d2773f28cfccf787a3"
+                "reference": "617573c4444d23a5c67faf10e6c861c7c4b2ba73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/23341344e19bbab1056cf2d2773f28cfccf787a3",
-                "reference": "23341344e19bbab1056cf2d2773f28cfccf787a3",
+                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/617573c4444d23a5c67faf10e6c861c7c4b2ba73",
+                "reference": "617573c4444d23a5c67faf10e6c861c7c4b2ba73",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
                 "archive",
                 "tar"
             ],
-            "time": "2013-02-09 11:44:32"
+            "time": "2013-11-21 10:57:51"
         },
         {
             "name": "pear/console_color2",
