@@ -84,7 +84,7 @@
 }
 #details .detail img.screenshot {
   border: 10px solid #fff;
-  height: 440px;
+  height: auto;
   width: 940px;
   -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
   -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
