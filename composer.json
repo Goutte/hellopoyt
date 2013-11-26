@@ -32,7 +32,8 @@
         "post-update-cmd": [
             "rm -f bin/phrozn.php",
             "ln -s $(pwd)/vendor/farazdagi/phrozn/bin/phrozn.php bin/phrozn.php",
-            "chmod +x bin/phrozn.php"
+            "chmod +x bin/phrozn.php",
+            "chmod +x bin/build"
         ]
     }
 }
