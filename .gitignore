@@ -2,3 +2,6 @@
 .directory
 
 vendor/
+
+composer.phar
+bin/phrozn.php
