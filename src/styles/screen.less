@@ -67,6 +67,14 @@ header {
   width: 100%;
   background-color: @colorBlack;
 
+  @intensity: 5px;
+//  -moz-box-shadow:    inset  0  @intensity @intensity -@intensity - 1 @colorShadow,
+//                      inset  0 -@intensity @intensity -@intensity @colorShadow;
+  -webkit-box-shadow: 0 -1px @intensity @intensity @colorShadow;
+
+//  box-shadow:         inset  0  @intensity @intensity -@intensity - 1 @colorShadow,
+//                      inset  0 -@intensity @intensity -@intensity @colorShadow;
+
   .container {
     width: @widthContainer;
     overflow: auto;

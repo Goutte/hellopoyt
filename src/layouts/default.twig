@@ -48,6 +48,11 @@
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
 
+    var sk;
+
+//    jQuery(document).load(function ($) {
+//        if (sk) sk.refresh();
+//    });
     jQuery(document).ready(function ($) {
 
         // BLACK CIRCLE
@@ -77,7 +82,7 @@
 
 
         // SKROLLR
-        var sk = skrollr.init({
+        sk = skrollr.init({
             mobileCheck: false,
             smoothScrolling: true,
             forceHeight: false
@@ -134,6 +139,13 @@
         // SPINNER
         $("#bowlG").hide();
         $("body > .container").css('opacity',1.0);
+
+
+        // FIX NOT UNDERSTOOD BUG
+        // Skrollr initializes with wrong positions
+        setTimeout(function(){
+            sk.refresh();
+        }, 666); // timeout is evil
 
     });
 

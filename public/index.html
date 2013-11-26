@@ -1115,9 +1115,9 @@
                             <hr>
                 <div class="additional-screenshots">
                                                                                     <img class="screenshot" src="projects/016-ubisoft-25years/02.jpg" alt="">
+                                                                    <img class="screenshot" src="projects/016-ubisoft-25years/05.jpg" alt="">
                                                                     <img class="screenshot" src="projects/016-ubisoft-25years/03.jpg" alt="">
                                                                     <img class="screenshot" src="projects/016-ubisoft-25years/04.jpg" alt="">
-                                                                    <img class="screenshot" src="projects/016-ubisoft-25years/05.jpg" alt="">
                                                 </div>
             
                 <hr>
@@ -1433,6 +1433,11 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script>
 
+    var sk;
+
+//    jQuery(document).load(function ($) {
+//        if (sk) sk.refresh();
+//    });
     jQuery(document).ready(function ($) {
 
         // BLACK CIRCLE
@@ -1462,7 +1467,7 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
 
         // SKROLLR
-        var sk = skrollr.init({
+        sk = skrollr.init({
             mobileCheck: false,
             smoothScrolling: true,
             forceHeight: false
@@ -1519,6 +1524,11 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
         // SPINNER
         $("#bowlG").hide();
         $("body > .container").css('opacity',1.0);
+
+
+        setTimeout(function(){
+            sk.refresh();
+        }, 500); // timeout is not cool
 
     });
 
