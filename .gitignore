@@ -4,4 +4,4 @@
 vendor/
 
 composer.phar
-bin/phrozn.phpss
+bin/phrozn.php
