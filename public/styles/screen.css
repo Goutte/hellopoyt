@@ -803,14 +803,14 @@ hr {
   text-shadow: none;
 }
 .anchor {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 header {
   position: fixed;
   top: 0;
   z-index: 50;
-  height: 50px;
+  height: 56px;
   width: 100%;
   background-color: #000;
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -825,27 +825,30 @@ header .container {
 header h1 {
   float: left;
   font-size: 0;
-  height: 50px;
+  height: 56px;
   width: 120px;
-  margin-right: 50px;
+  margin-right: 25px;
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
 }
 header a {
+  display: block;
+  height: 40px;
+  margin-top: 8px;
+}
+header nav a {
   -webkit-transition: all 0.2s ease-in-out;
   -khtml-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  display: block;
-  height: 50px;
-}
-header nav a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   float: left;
-  line-height: 50px;
-  padding: 0 25px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-left: 15px;
+  border-radius: 5px;
 }
 header nav a:hover,
 header nav a:focus {
@@ -855,17 +858,16 @@ header nav a:focus {
 header a.email {
   font-size: 0;
   float: right;
-  width: 50px;
-  background-position: center center;
+  width: 34px;
+  height: 26px;
+  margin-top: 15px;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-image: url('../media/img/envelope.png');
+  background-image: url('../media/img/envelope_sprite.png');
 }
 header a.email:hover,
 header a.email:focus {
-  transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  background-position: bottom center;
 }
 body > .container {
   opacity: 0;

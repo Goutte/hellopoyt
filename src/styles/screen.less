@@ -83,26 +83,33 @@ header {
     font-size: 0;
     height: @heightHeader;
     width: 120px;
-    margin-right: 50px;
+    margin-right: 25px;
 
     background: url('../media/img/hellopoyt-white.png') no-repeat center center;
   }
 
+  @navLinkPadding: 8px;
+
   a {
-    .smooth;
     display: block;
-    height: @heightHeader;
+    height: @heightHeader - @navLinkPadding*2;
+    margin-top: @navLinkPadding;
   }
 
   nav a {
+    .smooth;
+
     color: @colorWhite;
     text-transform: uppercase;
-    //font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
 
-    float:   left;
-    line-height: @heightHeader;
-    padding: 0 25px;
+    float: left;
+    line-height: @heightHeader - @navLinkPadding*2;
+    padding: 0 20px;
+
+    margin-left: 15px;
+
+    border-radius: 5px;
 
     &:hover, &:focus {
       background-color: @colorWhite;
@@ -113,17 +120,17 @@ header {
   a.email{
     font-size: 0;
     float:   right;
-    width:  50px;
+    width:  34px;
+    height: 26px;
 
-    .background-image;
-    background-image: url('../media/img/envelope.png');
+    margin-top: @heightHeader/2 - 26/2;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url('../media/img/envelope_sprite.png');
 
     &:hover, &:focus {
-      @scale: 1.1;
-      transform: scale(@scale);
-      -o-transform: scale(@scale);
-      -moz-transform: scale(@scale);
-      -webkit-transform: scale(@scale);
+      background-position: bottom center;
     }
   }
 
@@ -131,6 +138,7 @@ header {
 
 
 //// CONTAINER
+
 body > .container {
   opacity: 0; // js will set this to 1 when DOM is ready
 }
