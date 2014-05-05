@@ -3,16 +3,27 @@
 }
 #introduction .row02 {
   background-image: url('../media/img/introduction/02.jpg');
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row03 {
   background-image: url('../media/img/introduction/03.jpg');
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row04 {
   background-image: url('../media/img/introduction/04.jpg');
-  -webkit-box-shadow: inset 0 18px 18px -19px rgba(0,0,0,0.25), inset 0 -18px 18px -18px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row05 {
   background-image: url('../media/img/introduction/05.jpg');
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row {
   height: 0;
@@ -34,62 +45,12 @@
 #introduction #row_container {
   height: 0;
 }
-#introduction #circle {
+#circle {
+  background-image: url('../media/img/introduction/hellopoyt.png');
   display: none;
   position: fixed;
-  top: -250px;
   z-index: 100;
-  width: 250px;
-  height: 250px;
+  width: 605px;
+  height: 237px;
   overflow: visible;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  background-color: #000;
-}
-#introduction #circle .circle_content {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-#introduction #circle_hello {
-  background-image: url('../media/img/circle/hello.png');
-}
-#introduction #circle_i_m_art_director {
-  background-image: url('../media/img/circle/i-m-art-director.png');
-}
-#introduction #circle_yeah {
-  position: absolute;
-  top: -42px;
-  right: -106px;
-  width: 96px;
-  height: 96px;
-  background: url('../media/img/circle/yeah.png') no-repeat center center;
-}
-#introduction #circle_and {
-  background-image: url('../media/img/circle/and.png');
-}
-#introduction #circle_illustrator {
-  background-image: url('../media/img/circle/illustrator.png');
-}
-#introduction #circle_pen_left {
-  position: absolute;
-  top: 13px;
-  left: -68px;
-  width: 64px;
-  height: 232px;
-  background: url('../media/img/circle/pen_left.png') no-repeat center center;
-}
-#introduction #circle_pen_right {
-  position: absolute;
-  top: 13px;
-  right: -68px;
-  width: 64px;
-  height: 232px;
-  background: url('../media/img/circle/pen_right.png') no-repeat center center;
-}
-#introduction #circle_that_s_my_work {
-  background-image: url('../media/img/circle/that-s-my-work.png');
 }

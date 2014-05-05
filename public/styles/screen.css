@@ -360,11 +360,11 @@ table {
   opacity: 0;
 }
 .smooth {
-  -webkit-transition: all 0.5s ease-in-out;
-  -khtml-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .slick {
   -webkit-transition: all 0.3s ease-in-out;
@@ -483,16 +483,27 @@ table {
 }
 #introduction .row02 {
   background-image: url('../media/img/introduction/02.jpg');
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row03 {
   background-image: url('../media/img/introduction/03.jpg');
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row04 {
   background-image: url('../media/img/introduction/04.jpg');
-  -webkit-box-shadow: inset 0 18px 18px -19px rgba(0,0,0,0.25), inset 0 -18px 18px -18px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row05 {
   background-image: url('../media/img/introduction/05.jpg');
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
 #introduction .row {
   height: 0;
@@ -514,79 +525,40 @@ table {
 #introduction #row_container {
   height: 0;
 }
-#introduction #circle {
+#circle {
+  background-image: url('../media/img/introduction/hellopoyt.png');
   display: none;
   position: fixed;
-  top: -250px;
   z-index: 100;
-  width: 250px;
-  height: 250px;
+  width: 605px;
+  height: 237px;
   overflow: visible;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  background-color: #000;
 }
-#introduction #circle .circle_content {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-#introduction #circle_hello {
-  background-image: url('../media/img/circle/hello.png');
-}
-#introduction #circle_i_m_art_director {
-  background-image: url('../media/img/circle/i-m-art-director.png');
-}
-#introduction #circle_yeah {
-  position: absolute;
-  top: -42px;
-  right: -106px;
-  width: 96px;
-  height: 96px;
-  background: url('../media/img/circle/yeah.png') no-repeat center center;
-}
-#introduction #circle_and {
-  background-image: url('../media/img/circle/and.png');
-}
-#introduction #circle_illustrator {
-  background-image: url('../media/img/circle/illustrator.png');
-}
-#introduction #circle_pen_left {
-  position: absolute;
-  top: 13px;
-  left: -68px;
-  width: 64px;
-  height: 232px;
-  background: url('../media/img/circle/pen_left.png') no-repeat center center;
-}
-#introduction #circle_pen_right {
-  position: absolute;
-  top: 13px;
-  right: -68px;
-  width: 64px;
-  height: 232px;
-  background: url('../media/img/circle/pen_right.png') no-repeat center center;
-}
-#introduction #circle_that_s_my_work {
-  background-image: url('../media/img/circle/that-s-my-work.png');
+#skrollr-body h2 {
+  margin: 50px auto 0 auto;
+  font-size: 0;
+  width: 210px;
+  height: 55px;
+  background: url('../media/img/work.png') no-repeat center center;
+  position: relative;
 }
 #portfolio {
   margin: 50px auto 0 auto;
   width: 980px;
   overflow: auto;
 }
+#portfolio a.project_thumbnail:hover {
+  background-image: url('../media/img/thumb-over.png');
+}
 #portfolio article {
   float: left;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
 }
 #portfolio article figcaption {
   padding-top: 13px;
   text-align: center;
   color: #a6a6a6;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 #portfolio article figcaption .title {
   font-weight: bold;
@@ -618,9 +590,9 @@ table {
 #details .detail h3 {
   text-align: center;
   font-size: 0.85;
-  text-shadow: 0 0 1px #666666;
+  font-weight: bold;
   color: #333333;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 #details .detail img.screenshot {
   border: 10px solid #fff;
@@ -632,11 +604,12 @@ table {
 }
 #details .detail ul {
   margin: 25px 0 25px 25px;
+  font-size: 14px;
+  line-height: 16px;
 }
 #details .detail ul li span.key {
   display: inline-block;
   width: 60px;
-  font-size: 0.8;
   font-weight: bold;
   color: #a6a6a6;
 }
@@ -725,7 +698,7 @@ table {
   position: absolute;
 }
 #information .col_left #information_pola_front {
-  top: 70px;
+  top: 0px;
   left: 160px;
 }
 #information .col_right {
@@ -734,12 +707,12 @@ table {
   padding-left: 20px;
 }
 #information h2 {
+  margin: 50px auto 30px auto;
   font-size: 0;
   width: 223px;
   height: 75px;
   background: url('../media/img/hellopoyt.png') no-repeat center center;
   position: relative;
-  left: -4px;
 }
 #information p {
   font-size: 0.95em;
@@ -785,19 +758,17 @@ table {
   font-size: 0;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.0;
   position: relative;
-  top: -30px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -khtml-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  top: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 #contact nav a:hover span,
 #contact nav a:focus span {
-  opacity: 1.0;
-  top: 0;
+  top: 10px;
 }
 #contact nav #contact_mail span {
   background-image: url('../media/img/mail.png');
@@ -842,7 +813,9 @@ header {
   height: 50px;
   width: 100%;
   background-color: #000;
-  -webkit-box-shadow: 0 -1px 5px 5px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 header .container {
   width: 980px;
@@ -858,11 +831,11 @@ header h1 {
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
 }
 header a {
-  -webkit-transition: all 0.5s ease-in-out;
-  -khtml-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: block;
   height: 50px;
 }
@@ -889,10 +862,10 @@ header a.email {
 }
 header a.email:hover,
 header a.email:focus {
-  transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 body > .container {
   opacity: 0;

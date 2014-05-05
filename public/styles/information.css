@@ -16,7 +16,7 @@
   position: absolute;
 }
 #information .col_left #information_pola_front {
-  top: 70px;
+  top: 0px;
   left: 160px;
 }
 #information .col_right {
@@ -25,12 +25,12 @@
   padding-left: 20px;
 }
 #information h2 {
+  margin: 50px auto 30px auto;
   font-size: 0;
   width: 223px;
   height: 75px;
   background: url('../media/img/hellopoyt.png') no-repeat center center;
   position: relative;
-  left: -4px;
 }
 #information p {
   font-size: 0.95em;

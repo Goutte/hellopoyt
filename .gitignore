@@ -1,7 +1,11 @@
 .idea
 .directory
 
+# Vendors (composer gets them)
 vendor/
 
+# Composer binary
 composer.phar
+
+# Symbolic Link
 bin/phrozn.php

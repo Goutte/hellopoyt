@@ -14,62 +14,13 @@ providers:
 
     <div id="circle"
          data-anchor-target="#portfolio"
-         data--10p-bottom-top="transform: scale(1.0);"
-         data--60p-bottom-top="transform: scale(0.0);"
-         data-140p="transform: scaleY(1.0);"
-         data-150p="transform: scaleY(0.0);"
-         data-160p="transform: scaleY(1.0);"
-         data-240p="transform: scaleY(1.0);"
-         data-250p="transform: scaleY(0.0);"
-         data-260p="transform: scaleY(1.0);"
-    >
-        <div id="circle_hello" class="circle_content"
-                data-040p="opacity: 1.0;"
-                data-060p="opacity: 0.0;"
-        ></div>
-        <div id="circle_i_m_art_director" class="circle_content"
-                data-040p="opacity: 0.0;"
-                data-060p="opacity: 1.0;"
-                data-149p="opacity: 1.0;"
-                data-151p="opacity: 0.0;"
-        ></div>
-        <div id="circle_yeah"
-                data-070p="opacity: 0.0; top:  30px; right: -24px; transform: scale(0.2);"
-                data-090p="opacity: 1.0; top: -32px; right: -96px; transform: scale(1.0);"
-                data-149p="opacity: 1.0; top: -52px; right: -116px;"
-                data-151p="opacity: 0.0;"
-        ></div>
-        <div id="circle_and" class="circle_content"
-                data-149p="opacity: 0.0;"
-                data-151p="opacity: 1.0;"
-                data-249p="opacity: 1.0;"
-                data-251p="opacity: 0.0;"
-        ></div>
-        <div id="circle_illustrator" class="circle_content"
-                data-249p="opacity: 0.0;"
-                data-251p="opacity: 1.0;"
-                data-340p="opacity: 1.0;"
-                data-360p="opacity: 0.0;"
-        ></div>
-        <div id="circle_pen_left"
-                data-249p="opacity: 0.0;"
-                data-251p="opacity: 1.0; transform: scale(1.0, 1.0);"
-                data-300p="transform: scale(0.9, 1.1);"
-                data-340p="opacity: 1.0; transform: scale(1.0, 1.0);"
-                data-360p="opacity: 0.0;"
-        ></div>
-        <div id="circle_pen_right"
-                data-249p="opacity: 0.0;"
-                data-251p="opacity: 1.0; transform: scale(1.0, 1.0);"
-                data-300p="transform: scale(1.1, 0.9);"
-                data-340p="opacity: 1.0; transform: scale(1.0, 1.0);"
-                data-360p="opacity: 0.0;"
-        ></div>
-        <div id="circle_that_s_my_work" class="circle_content"
-                data-340p="opacity: 0.0;"
-                data-360p="opacity: 1.0;"
-        ></div>
-    </div>
+         data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"
+         data--20p-bottom-top="opacity: 0.0; transform : scale(0.0);"
+         data-140p="opacity: 1.0;"
+         data-160p="opacity: 1.0;"
+         data-240p="opacity: 1.0;"
+         data-260p="opacity: 1.0;"
+    ></div>
 
     <div id="row-container">
     <div class="row row01"
@@ -104,6 +55,8 @@ providers:
 
 {# FOR MOBILES, CONTAINER FOR STATIC ELEMENTS #}
 <div id="skrollr-body">
+
+	<h2>Work</h2>
 
     {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
     <section id="portfolio" data-menu-offset="-60">
@@ -189,6 +142,10 @@ providers:
     {## INFORMATION ABOUT HELLOPOYT #}
     <section id="information" data-menu-offset="-50">
 
+	<hr class="clear">
+
+        <h2>Hellopoyt</h2>
+
         <div class="col_left">
             <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""
                  data-0000p-bottom-top="left: -600px; transform: rotateZ(-200deg);"
@@ -203,7 +160,6 @@ providers:
         </div>
 
         <div class="col_right">
-            <h2>Hellopoyt</h2>
             <p class="first">
                 {{ this.hellopoyt.p1 }}
             </p>
