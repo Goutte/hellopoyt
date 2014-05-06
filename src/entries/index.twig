@@ -15,51 +15,22 @@ providers:
     <div id="circle"
          data-anchor-target="#portfolio"
          data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"
-         data--20p-bottom-top="opacity: 0.0; transform : scale(0.0);"
-         data-140p="opacity: 1.0;"
-         data-160p="opacity: 1.0;"
-         data-240p="opacity: 1.0;"
-         data-260p="opacity: 1.0;"
+         data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"
     ></div>
 
     <div id="row-container">
-    <div class="row row01"
-         data-000p="display: block;"
-         data-100p="display: none;"
-    ></div>
-    <div class="row row02"
-         data-000p="top: 100%; display: block;"
-         data-100p="top: 0%;"
-         data-200p="display: none;"
-    ></div>
-    <div class="row row03"
-         data-100p="top: 100%; display: block;"
-         data-200p="top: 0%;"
-         data-300p="display: none;"
-    ></div>
-    <div class="row row04"
-         data-200p="top: 100%; display: block;"
-         data-300p="top: 0%;"
-         data-400p="display: none;"
-    ></div>
-    <div class="row row05"
-         data-300p="top:  100%; display: block;"
-         data-400p="top:   0%;"
-         data-500p="top: -100%; display: none;"
-    ></div>
+        <div class="row row01"></div>
     </div>
-
-    <div class="row space"></div>
 
 </section>
 
 {# FOR MOBILES, CONTAINER FOR STATIC ELEMENTS #}
 <div id="skrollr-body">
 
-    <h2>Work</h2>
-
     {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
-    <section id="portfolio" data-menu-offset="-60">
+    <section id="portfolio" data-menu-offset="-90">
+
+    <h2>Work</h2>
 
     {% for project in this.providers.all_projects %}
 
@@ -76,6 +47,7 @@ providers:
                         <span class="client">- {{ project.client }} -</span>
                     </figcaption>
                 </figure>
+                <div class="rollover-go"></div>
             </article>
         </a>
 
@@ -142,9 +114,9 @@ providers:
 
 
     {## INFORMATION ABOUT HELLOPOYT #}
-    <section id="information" data-menu-offset="-50">
+    <section id="information" data-menu-offset="-10">
 
-    <hr class="clear">
+        <hr class="clear">
 
         <h2>Hellopoyt</h2>
 
