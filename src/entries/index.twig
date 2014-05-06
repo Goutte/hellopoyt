@@ -94,6 +94,10 @@ providers:
                 </div>
             {% endif %}
 
+            {% if project.video_youtube is not empty %}
+                <iframe class="video" height="568" src="http://www.youtube.com/embed/{{ project.video_youtube }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+
                 <hr>
 
                 <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>

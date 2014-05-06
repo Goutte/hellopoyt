@@ -49,11 +49,13 @@ mission: Art Direction / Illustration
 client: Ubisoft
 agency: Diplomatic-Cover
 link: http://25years.ubi.com
+video_youtube: qt5nJWtVT7Q
 ```
 
 Then, upload a `thumbnail.jpg` in the folder, size 300x200 pixels.
 Then, upload other `.jpg` images of size 940x440 pixels.
-Their names do not matter as long as there are no funny characters inside. Say only alphanumericals and `-` or `_`, to be on the safe side.
+Their names do not matter as long as there are no funny characters inside.
+Let's say only alphanumericals and `-` or `_`, to be on the safe side.
 
 Re-generate the website, and you're done !
 
