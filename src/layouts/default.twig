@@ -27,16 +27,6 @@
 {# HEADER #}
 {% include './header.twig' %}
 
-{# SPINNER #}
-<div id="bowlG">
-    <div id="bowl_ringG">
-        <div class="ball_holderG">
-            <div class="ballG">
-            </div>
-        </div>
-    </div>
-</div>
-
 {# CONTENT #}
 <div class="container">
     {{ content }}
@@ -44,15 +34,27 @@
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{# the following is used by your servant only when the internet is down and he has to code nonetheless #}
 {#<script>window.jQuery || document.write('<script src="scripts/jquery-1.10.2.min.js"><\/script>')</script>#}
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript">
 
     var sk;
 
-//    jQuery(document).load(function ($) {
-//        if (sk) sk.refresh();
-//    });
+    var imagesLoadedCount = 0;
+    jQuery(document).imagesLoaded()
+            .always(function (instance) {
+                // LOADING
+                jQuery('#loading').hide();
+                // SKROLLR
+                if (sk) sk.refresh();
+            })
+            .progress(function (instance, image) {
+                imagesLoadedCount++;
+                var imagesLoadedTotal = instance.images.length;
+                var progress = Math.round(100 * imagesLoadedCount / imagesLoadedTotal);
+                jQuery('#loading-progress').text(progress.toString());
+            });
 
     jQuery(document).ready(function ($) {
 
@@ -137,16 +139,10 @@
         });
 
 
-        // SPINNER
-        $("#bowlG").hide();
-        $("body > .container").css('opacity',1.0);
+//        // SPINNER
+//        $("#bowlG").hide();
+//        $("body > .container").css('opacity', 1.0);
 
-
-        // HOTFIX FOR NOT-UNDERSTOOD BUG
-        // Skrollr initializes with wrong positions
-        setTimeout(function(){
-            sk.refresh();
-        }, 666); // timeout is evil
 
     });
 

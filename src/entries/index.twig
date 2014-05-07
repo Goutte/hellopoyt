@@ -95,7 +95,11 @@ providers:
             {% endif %}
 
             {% if project.video_youtube is not empty %}
-                <iframe class="video" height="568" src="http://www.youtube.com/embed/{{ project.video_youtube }}" frameborder="0" allowfullscreen></iframe>
+                <iframe class="video" height="568" src="http://www.youtube.com/embed/{{ project.video_youtube }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+
+            {% if project.video_vimeo is not empty %}
+                <iframe class="video" height="568" src="http://player.vimeo.com/video/{{ project.video_vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             {% endif %}
 
                 <hr>

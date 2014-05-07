@@ -813,6 +813,23 @@ hr {
   padding-top: 56px;
   margin-top: -56px;
 }
+@keyframes loading-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loading {
+  animation-name: loading-blink;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 header {
   position: fixed;
   top: 0;
@@ -837,17 +854,15 @@ header h1 {
   margin-right: 25px;
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
 }
-header a {
-  display: block;
-  height: 40px;
-  margin-top: 8px;
-}
-header nav a {
+header nav ul li > * {
   -webkit-transition: all 0.2s ease-in-out;
   -khtml-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  display: block;
+  height: 40px;
+  margin-top: 8px;
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
@@ -857,12 +872,13 @@ header nav a {
   margin-left: 15px;
   border-radius: 5px;
 }
-header nav a:hover,
-header nav a:focus {
+header nav ul li > *:hover,
+header nav ul li > *:focus {
   background-color: #fff;
   color: #000;
 }
 header a.email {
+  display: block;
   font-size: 0;
   float: right;
   width: 34px;
@@ -875,9 +891,6 @@ header a.email {
 header a.email:hover,
 header a.email:focus {
   background-position: bottom center;
-}
-body > .container {
-  opacity: 0;
 }
 footer {
   height: 300px;

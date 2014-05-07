@@ -3,7 +3,6 @@
 @import "reset";
 @import "normalize";
 @import "mixins";
-@import "spinner";
 @import "introduction";
 @import "portfolio";
 @import "information";
@@ -56,6 +55,30 @@ hr {
 }
 
 
+//// LOADING
+
+@keyframes loading-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loading {
+  @loadingAnimationDuration: 2.3s;
+
+  animation-name: loading-blink;
+  animation-duration: @loadingAnimationDuration;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
 //// HEADER
 
 header {
@@ -90,14 +113,18 @@ header {
 
   @navLinkPadding: 8px;
 
-  a {
+//  a {
+//    display: block;
+//    height: @heightHeader - @navLinkPadding*2;
+//    margin-top: @navLinkPadding;
+//  }
+
+  nav ul li > * {
+    .smooth;
+
     display: block;
     height: @heightHeader - @navLinkPadding*2;
     margin-top: @navLinkPadding;
-  }
-
-  nav a {
-    .smooth;
 
     color: @colorWhite;
     text-transform: uppercase;
@@ -118,10 +145,13 @@ header {
   }
 
   a.email{
+    display: block;
+
     font-size: 0;
     float:   right;
     width:  34px;
     height: 26px;
+
 
     margin-top: @heightHeader/2 - 26/2;
 
@@ -140,7 +170,7 @@ header {
 //// CONTAINER
 
 body > .container {
-  opacity: 0; // js will set this to 1 when DOM is ready
+//  opacity: 0; // js will set this to 1 when DOM is ready
 }
 
 

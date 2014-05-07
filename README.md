@@ -50,6 +50,7 @@ client: Ubisoft
 agency: Diplomatic-Cover
 link: http://25years.ubi.com
 video_youtube: qt5nJWtVT7Q
+video_vimeo: 50762517
 ```
 
 Then, upload a `thumbnail.jpg` in the folder, size 300x200 pixels.
