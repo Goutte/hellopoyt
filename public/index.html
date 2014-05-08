@@ -40,11 +40,14 @@
 <div class="container">
     <section id="introduction">
 
+    <div id="introduction-title"
+                               >
     <div id="circle"
          data-anchor-target="#portfolio"
-         data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"
-         data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"
+         data--000p-bottom-top="top: 0px;"
+         data--100p-bottom-top="top: -200px"
     ></div>
+    </div>
 
     <div id="row-container">
         <div class="row row01"></div>
@@ -54,7 +57,7 @@
 
 <div id="skrollr-body">
 
-        <section id="portfolio" data-menu-offset="-90">
+        <section id="portfolio" data-menu-offset="-50">
 
     <h2>Work</h2>
 
@@ -1239,8 +1242,8 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
     jQuery(document).ready(function ($) {
 
-        // BLACK CIRCLE
-        var $circle = $('#circle');
+        // INTRODUCTION HELLOPOYT
+        var $circle = $('#introduction-title');
         var centerizeCircle = function(){
             var widthWindow = $(window).width();
             var heightWindow = $(window).height();
@@ -1251,7 +1254,9 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
         $(window).on('resize', centerizeCircle);
         centerizeCircle();
 
-        $circle.show();
+        setTimeout(function(){
+            $circle.fadeIn(1000);
+        }, 1000); // ghn.
 
 
         // INTRODUCTION BG IMAGES

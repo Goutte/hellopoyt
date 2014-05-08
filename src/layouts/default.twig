@@ -58,8 +58,8 @@
 
     jQuery(document).ready(function ($) {
 
-        // BLACK CIRCLE
-        var $circle = $('#circle');
+        // INTRODUCTION HELLOPOYT
+        var $circle = $('#introduction-title');
         var centerizeCircle = function(){
             var widthWindow = $(window).width();
             var heightWindow = $(window).height();
@@ -70,7 +70,9 @@
         $(window).on('resize', centerizeCircle);
         centerizeCircle();
 
-        $circle.show();
+        setTimeout(function(){
+            $circle.fadeIn(1000);
+        }, 1000); // ghn.
 
 
         // INTRODUCTION BG IMAGES

@@ -6,7 +6,13 @@
 
   .row01 {
     background-image: url('../media/img/introduction/01.jpg');
+
+    -webkit-box-shadow: inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    -moz-box-shadow:    inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    box-shadow:         inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
   }
+
+
 
 //  .row02 {
 //    background-image: url('../media/img/introduction/02.jpg');
@@ -70,16 +76,21 @@
 
 }
 
+#introduction-title {
+  position: absolute;
+  z-index: 20;
+
+  display: none; // displayed by javascript after initial centering
+
+  overflow: visible;
+}
+
 #circle {
   background-image: url('../media/img/introduction/hellopoyt.png');
-  display: none;
 
-  position: fixed;
-  z-index: 100;
+  position: relative;
 
   width: 605px;
   height: 237px;
-
-  overflow: visible;
 }
 

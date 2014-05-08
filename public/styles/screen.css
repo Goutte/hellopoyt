@@ -379,6 +379,9 @@ table {
 }
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
+  -webkit-box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
 }
 #introduction .row {
   height: 0;
@@ -399,17 +402,21 @@ table {
 #introduction #row_container {
   height: 0;
 }
-#circle {
-  background-image: url('../media/img/introduction/hellopoyt.png');
+#introduction-title {
+  position: absolute;
+  z-index: 20;
   display: none;
-  position: fixed;
-  z-index: 100;
-  width: 605px;
-  height: 237px;
   overflow: visible;
 }
+#circle {
+  background-image: url('../media/img/introduction/hellopoyt.png');
+  position: relative;
+  width: 605px;
+  height: 237px;
+}
 #portfolio {
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
+  padding-top: 50px;
   width: 980px;
   overflow: auto;
 }
@@ -471,9 +478,9 @@ table {
   background-color: #efefef;
   margin: 40px auto;
   padding: 10px 0 30px 0;
-  -moz-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
-  -webkit-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
-  box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.25), inset 0 -13px 13px -13px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.3), inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.3), inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  box-shadow: inset 0 13px 13px -14px rgba(0,0,0,0.3), inset 0 -13px 13px -13px rgba(0,0,0,0.3);
 }
 #details .detail.visible {
   display: block;
@@ -496,9 +503,9 @@ table {
   border: 10px solid #fff;
   height: auto;
   width: 940px;
-  -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
-  -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
-  box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
+  -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
 }
 #details .detail ul {
   margin: 25px 0 25px 25px;
@@ -520,9 +527,9 @@ table {
 #details .detail .video {
   border: 10px solid #fff;
   width: 940px;
-  -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
-  -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
-  box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.15);
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
+  -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.2);
   margin-bottom: 25px;
 }
 #details .nav {

@@ -9,14 +9,20 @@ providers:
 
 ---
 
-{## INTRODUCTION WITH 5 FULLSCREEN IMAGES #}
+{## INTRODUCTION WITH WINDOW-SIZED IMAGE #}
 <section id="introduction">
 
+    <div id="introduction-title"
+         {#data-anchor-target="#portfolio"#}
+         {#data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"#}
+         {#data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"#}
+    >
     <div id="circle"
          data-anchor-target="#portfolio"
-         data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"
-         data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"
+         data--000p-bottom-top="top: 0px;"
+         data--100p-bottom-top="top: -200px"
     ></div>
+    </div>
 
     <div id="row-container">
         <div class="row row01"></div>
@@ -28,7 +34,7 @@ providers:
 <div id="skrollr-body">
 
     {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
-    <section id="portfolio" data-menu-offset="-90">
+    <section id="portfolio" data-menu-offset="-50">
 
     <h2>Work</h2>
 

@@ -1,5 +1,8 @@
 #introduction .row01 {
   background-image: url('../media/img/introduction/01.jpg');
+  -webkit-box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
 }
 #introduction .row {
   height: 0;
@@ -20,12 +23,15 @@
 #introduction #row_container {
   height: 0;
 }
+#introduction-title {
+  position: absolute;
+  z-index: 20;
+  display: none;
+  overflow: visible;
+}
 #circle {
   background-image: url('../media/img/introduction/hellopoyt.png');
-  display: none;
-  position: fixed;
-  z-index: 100;
+  position: relative;
   width: 605px;
   height: 237px;
-  overflow: visible;
 }
