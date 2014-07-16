@@ -45,12 +45,15 @@
     <div id="circle"
          data-anchor-target="#portfolio"
          data--000p-bottom-top="top: 0px;"
-         data--100p-bottom-top="top: -200px"
+         data--100p-bottom-top="top: -300px"
     ></div>
     </div>
 
     <div id="row-container">
-        <div class="row row01"></div>
+        <div class="row row01"
+             data-anchor-target="#portfolio"
+             data--000p-bottom-top="height: 658px;"             data--100p-bottom-top="height: 400px"
+        ></div>
     </div>
 
 </section>
@@ -1260,14 +1263,14 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
 
         // INTRODUCTION BG IMAGES
-        var updateIntroRows = function(){
-            var heightWindow = $(window).height();
-            $("#introduction .row").height(heightWindow);
-            $("#introduction .row.space").height(heightWindow*5);
-        };
-
-        $(window).on('resize', updateIntroRows);
-        updateIntroRows();
+        // not used anymore, but for later reference, refactor into "fullHeight" css class and other friends ?
+//        var updateIntroRows = function(){
+//            var heightWindow = $(window).height();
+//            $("#introduction .row").height(heightWindow);
+//            $("#introduction .row.space").height(heightWindow*5);
+//        };
+//        $(window).on('resize', updateIntroRows);
+//        updateIntroRows();
 
 
         // SKROLLR

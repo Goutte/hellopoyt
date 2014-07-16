@@ -384,7 +384,7 @@ table {
   box-shadow: inset 0 -13px 13px -13px rgba(0,0,0,0.3);
 }
 #introduction .row {
-  height: 0;
+  height: 656px;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
