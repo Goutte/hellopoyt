@@ -42,7 +42,7 @@ Example : `src/projects/010-ubisoft-25-years`.
 
 Inside this folder, create the file `description.yml`, with a content looking like this :
 
-``` description.yml
+``` yaml
 title: Ubisoft 25 Years
 subtitle: The Pie's The Limit
 mission: Art Direction / Illustration

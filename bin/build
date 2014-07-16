@@ -3,4 +3,6 @@
 # /!\ Launch this from project root
 # It will re-generate the website in the `public` folder
 
+# `bin/phrozn.php` is a link to `vendor/farazdagi/phrozn/bin/phrozn.php`
+
 php bin/phrozn.php build src public
