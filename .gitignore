@@ -4,8 +4,9 @@
 # Vendors (composer gets them)
 vendor/
 
-# Composer binary
+# Composer
 composer.phar
+composer.lock
 
 # Symbolic Link
 bin/phrozn.php
