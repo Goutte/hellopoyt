@@ -33,6 +33,8 @@ Change intro images
 Change the 5 images `src/media/img/introduction/XX.jpg`. Easy !
 The related CSS is in `src/styles/introduction.less`.
 
+Of course, we removed the intro images, so this is not valid anymore.
+
 Create new Project
 ------------------
 
@@ -42,7 +44,7 @@ Example : `src/projects/010-ubisoft-25-years`.
 
 Inside this folder, create the file `description.yml`, with a content looking like this :
 
-``` description.yml
+``` yaml
 title: Ubisoft 25 Years
 subtitle: The Pie's The Limit
 mission: Art Direction / Illustration

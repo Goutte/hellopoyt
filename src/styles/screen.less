@@ -7,6 +7,7 @@
 @import "portfolio";
 @import "information";
 @import "contact";
+@import "tumblr";
 
 
 //// GLOBAL TAGS
@@ -179,4 +180,25 @@ body > .container {
 footer {
   height: 300px;
   background-color: @colorBlack;
+
+  padding: 30px 55px 0 55px;
+
+  color: @colorWhite;
+  font-size: 0.8em;
+
+  line-height: 24px;
+
+  span#hellopoyt-copyright {
+    float: left;
+  }
+  span#goutte-credits {
+    float: right;
+
+    img {
+      float: right;
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+    }
+  }
 }
