@@ -7,10 +7,14 @@
 
     <meta charset="utf-8">
     <title>Hellopoyt!</title>
+
+    {# @Pat: FIXME #}
     <meta name="description" content="">
     <meta name="keywords" content="">
+
     {#<meta name="viewport" content="width=device-width, initial-scale=1">#}
 
+    {# @Pat: n'hésite pas à te mettre comme auteure dans les metas, à ma place ! #}
     <meta name="author" content="https://plus.google.com/+AntoineGoutenoir">
     <link rel="author" href="https://plus.google.com/+AntoineGoutenoir">
 
@@ -39,15 +43,13 @@
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript">
 
-    var sk;
+    var sk; // Skrollr, the sugary scroll manager
 
-    // LOADING: NN%
+    // SMOOTH LOADING WITH NN%
     var imagesLoadedCount = 0;
     jQuery(document).imagesLoaded()
             .always(function (instance) {
-                // LOADING
                 jQuery('#loading').hide();
-                // SKROLLR
                 if (sk) sk.refresh();
             })
             .progress(function (instance, image) {
@@ -60,42 +62,57 @@
     jQuery(document).ready(function ($) {
 
         // INTRODUCTION HELLOPOYT
-        var $circle = $('#introduction-title');
-        var centerizeCircle = function(){
-            var widthWindow = $(window).width();
-            var heightWindow = $(window).height();
-            $circle.css('left', (widthWindow - $circle.width())/2);
-            $circle.css('top',  (heightWindow - $circle.height())/2);
-        };
-
-        $(window).on('resize', centerizeCircle);
-        centerizeCircle();
-
-        setTimeout(function(){
-            $circle.fadeIn(1000);
-        }, 1000); // ghn.
-
-
-        // INTRODUCTION BG IMAGES
-        // not used anymore, but for later reference, refactor into "fullHeight" css class and other friends ?
-//        var updateIntroRows = function(){
+//        var $circle = $('#introduction-title');
+//        var centerizeCircle = function(){
+//            var widthWindow = $(window).width();
 //            var heightWindow = $(window).height();
-//            $("#introduction .row").height(heightWindow);
-//            $("#introduction .row.space").height(heightWindow*5);
+//            $circle.css('left', (widthWindow - $circle.width())/2);
+//            $circle.css('top',  (heightWindow - $circle.height())/2);
 //        };
-//        $(window).on('resize', updateIntroRows);
-//        updateIntroRows();
+//        $(window).on('resize', centerizeCircle);
+//        centerizeCircle();
+
+        // FADE-IN HELLOPOYT ON PAGE LOAD
+        setTimeout(function(){
+            $('#introduction-title').fadeIn(1000);
+        }, 1250); // such a hack, ghn >.<
+
+
+        // CENTERIZED DIVS
+        var $centerized = $('.centerized');
+        var updateCenterizedDivs = function(){
+            var widthWindow  = $(window).width();
+            var heightWindow = $(window).height();
+            $centerized.each(function(){
+                var c = $(this);
+                c.css('left', (widthWindow  - c.width())  / 2);
+                c.css('top',  (heightWindow - c.height()) / 2);
+            });
+        };
+        $(window).on('resize', updateCenterizedDivs);
+        updateCenterizedDivs();
+
+
+        // FULL HEIGHT DIVS
+        var updateFullHeightDivs = function(){
+            var heightWindow = $(window).height();
+            $(".fullHeight").height(heightWindow);
+        };
+        $(window).on('resize', updateFullHeightDivs);
+        updateFullHeightDivs();
 
 
         // SKROLLR
-        sk = skrollr.init({
-            mobileCheck: false,
-            smoothScrolling: true,
-            forceHeight: false
-        });
-        setTimeout(function(){
-            skrollr.menu.init(sk);
-        }, 300); // timeout is not cool
+        (function(){
+            sk = skrollr.init({
+                mobileCheck: false,
+                smoothScrolling: true,
+                forceHeight: false
+            });
+            setTimeout(function(){
+                skrollr.menu.init(sk);
+            }, 300); // timeout is not cool, but hey
+        })();
 
 
         // PROJECT DETAILS

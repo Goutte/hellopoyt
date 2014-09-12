@@ -33,6 +33,8 @@ Change intro images
 Change the 5 images `src/media/img/introduction/XX.jpg`. Easy !
 The related CSS is in `src/styles/introduction.less`.
 
+Of course, we removed the intro images, so this is not valid anymore.
+
 Create new Project
 ------------------
 

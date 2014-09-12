@@ -7,10 +7,12 @@
 
     <meta charset="utf-8">
     <title>Hellopoyt!</title>
-    <meta name="description" content="">
+
+        <meta name="description" content="">
     <meta name="keywords" content="">
+
     
-    <meta name="author" content="https://plus.google.com/+AntoineGoutenoir">
+        <meta name="author" content="https://plus.google.com/+AntoineGoutenoir">
     <link rel="author" href="https://plus.google.com/+AntoineGoutenoir">
 
     <script src="scripts/modernizr-2.6.2.min.js"></script>
@@ -38,19 +40,19 @@
 </header>
 
 <div class="container">
-    <section id="introduction">
+    <section id="introduction" class="fullHeight">
 
-    <div id="introduction-title"
+    <div id="introduction-title" class="centerized"
                                >
-    <div id="circle"
-         data-anchor-target="#portfolio"
-         data--000p-bottom-top="top: 0px;"
-         data--100p-bottom-top="top: -300px"
-    ></div>
+        <div id="circle"
+             data-anchor-target="#portfolio"
+             data--000p-bottom-top="top: 0px;"
+             data--100p-bottom-top="top: -300px"
+        ></div>
     </div>
 
     <div id="row-container">
-        <div class="row row01"
+        <div class="row row01 fullHeight"
              data-anchor-target="#portfolio"
              data--000p-bottom-top="height: 658px;"             data--100p-bottom-top="height: 400px"
         ></div>
@@ -1216,6 +1218,25 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 
     </section>
 
+
+        <section id="tumblr" class="fullHeight">
+
+        <div class="background background01 fullHeight"
+             data-anchor-target="#tumblr"
+             data--000p-bottom-top="top:   0px;"
+             data--200p-bottom-top="top:  50px"
+        ></div>
+
+        <a id="tumblr-title-wrapper" class="centerized" href="http://hellopoyt.tumblr.com">
+            <div id="tumblr-title"
+                 data-anchor-target="#tumblr"
+                 data--000p-bottom-top="top: -222px;"
+                 data--200p-bottom-top="top:  300px"
+            ></div>
+        </a>
+
+    </section>
+
 </div>
     <footer>
     <span id="hellopoyt-copyright">&copy; Hellopoyt 2010</span>
@@ -1232,15 +1253,13 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript">
 
-    var sk;
+    var sk; // Skrollr, the sugary scroll manager
 
-    // LOADING: NN%
+    // SMOOTH LOADING WITH NN%
     var imagesLoadedCount = 0;
     jQuery(document).imagesLoaded()
             .always(function (instance) {
-                // LOADING
                 jQuery('#loading').hide();
-                // SKROLLR
                 if (sk) sk.refresh();
             })
             .progress(function (instance, image) {
@@ -1253,42 +1272,57 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
     jQuery(document).ready(function ($) {
 
         // INTRODUCTION HELLOPOYT
-        var $circle = $('#introduction-title');
-        var centerizeCircle = function(){
-            var widthWindow = $(window).width();
-            var heightWindow = $(window).height();
-            $circle.css('left', (widthWindow - $circle.width())/2);
-            $circle.css('top',  (heightWindow - $circle.height())/2);
-        };
-
-        $(window).on('resize', centerizeCircle);
-        centerizeCircle();
-
-        setTimeout(function(){
-            $circle.fadeIn(1000);
-        }, 1000); // ghn.
-
-
-        // INTRODUCTION BG IMAGES
-        // not used anymore, but for later reference, refactor into "fullHeight" css class and other friends ?
-//        var updateIntroRows = function(){
+//        var $circle = $('#introduction-title');
+//        var centerizeCircle = function(){
+//            var widthWindow = $(window).width();
 //            var heightWindow = $(window).height();
-//            $("#introduction .row").height(heightWindow);
-//            $("#introduction .row.space").height(heightWindow*5);
+//            $circle.css('left', (widthWindow - $circle.width())/2);
+//            $circle.css('top',  (heightWindow - $circle.height())/2);
 //        };
-//        $(window).on('resize', updateIntroRows);
-//        updateIntroRows();
+//        $(window).on('resize', centerizeCircle);
+//        centerizeCircle();
+
+        // FADE-IN HELLOPOYT ON PAGE LOAD
+        setTimeout(function(){
+            $('#introduction-title').fadeIn(1000);
+        }, 1250); // such a hack, ghn >.<
+
+
+        // CENTERIZED DIVS
+        var $centerized = $('.centerized');
+        var updateCenterizedDivs = function(){
+            var widthWindow  = $(window).width();
+            var heightWindow = $(window).height();
+            $centerized.each(function(){
+                var c = $(this);
+                c.css('left', (widthWindow  - c.width())  / 2);
+                c.css('top',  (heightWindow - c.height()) / 2);
+            });
+        };
+        $(window).on('resize', updateCenterizedDivs);
+        updateCenterizedDivs();
+
+
+        // FULL HEIGHT DIVS
+        var updateFullHeightDivs = function(){
+            var heightWindow = $(window).height();
+            $(".fullHeight").height(heightWindow);
+        };
+        $(window).on('resize', updateFullHeightDivs);
+        updateFullHeightDivs();
 
 
         // SKROLLR
-        sk = skrollr.init({
-            mobileCheck: false,
-            smoothScrolling: true,
-            forceHeight: false
-        });
-        setTimeout(function(){
-            skrollr.menu.init(sk);
-        }, 300); // timeout is not cool
+        (function(){
+            sk = skrollr.init({
+                mobileCheck: false,
+                smoothScrolling: true,
+                forceHeight: false
+            });
+            setTimeout(function(){
+                skrollr.menu.init(sk);
+            }, 300); // timeout is not cool, but hey
+        })();
 
 
         // PROJECT DETAILS
