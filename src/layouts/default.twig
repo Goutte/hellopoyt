@@ -86,7 +86,6 @@
         // FULL HEIGHT DIVS
         var updateFullHeightDivs = function(){
             var heightWindow = $(window).height();
-            console.log("Setting height of "+heightWindow+"px.");
             $(".fullHeight").height(heightWindow);
         };
         $(window).on('resize', updateFullHeightDivs);

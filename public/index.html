@@ -45,6 +45,7 @@
     <div id="introduction-title" class="centerized"
                                >
         <div id="circle"
+             title="Hello there. I'm pat, welcome to my place!"
              data-anchor-target="#portfolio"
              data--000p-bottom-top="top: 0px;"
              data--100p-bottom-top="top: -300px"
@@ -1226,10 +1227,9 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
              data-anchor-target="#tumblr"
              data--000p-bottom-top="top:   0px;"
              data--200p-bottom-top="top: 200px"
+        ></div>
 
-                                               ></div>
-
-        <a id="tumblr-title-wrapper" class="centerized" href="http://hellopoyt.tumblr.com">
+        <a id="tumblr-title-wrapper" class="centerized" href="http://hellopoyt.tumblr.com" title="Browse my latest sketches and creations, as they go.">
             <div id="tumblr-title"
                  data-anchor-target="#tumblr"
                  data--000p-bottom-top="top: -222px;"
@@ -1298,7 +1298,6 @@ Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef i
         // FULL HEIGHT DIVS
         var updateFullHeightDivs = function(){
             var heightWindow = $(window).height();
-            console.log("Setting height of "+heightWindow+"px.");
             $(".fullHeight").height(heightWindow);
         };
         $(window).on('resize', updateFullHeightDivs);
