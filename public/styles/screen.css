@@ -785,7 +785,7 @@ header {
 }
 header .container {
   width: 980px;
-  overflow: auto;
+  overflow: visible;
   margin: 0 auto;
 }
 header h1 {
@@ -828,16 +828,25 @@ header a.email {
   display: block;
   font-size: 0;
   float: right;
-  width: 34px;
-  height: 26px;
-  margin-top: 15px;
+  width: 25px;
+  height: 18px;
+  margin-top: 19px;
   background-position: top center;
   background-repeat: no-repeat;
-  background-image: url('../media/img/envelope_sprite.png');
+  background-image: url('../media/img/envelope.png');
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 header a.email:hover,
 header a.email:focus {
-  background-position: bottom center;
+  transform: scale(1.2121);
+  -o-transform: scale(1.2121);
+  -ms-transform: scale(1.2121);
+  -moz-transform: scale(1.2121);
+  -webkit-transform: scale(1.2121);
 }
 footer {
   height: 300px;

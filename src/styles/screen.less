@@ -98,7 +98,7 @@ header {
 
   .container {
     width: @widthContainer;
-    overflow: auto;
+    overflow: visible;
     margin: 0 auto;
   }
 
@@ -155,19 +155,25 @@ header {
     display: block;
 
     font-size: 0;
-    float:   right;
-    width:  34px;
-    height: 26px;
+    float:  right;
+    width:  25px;
+    height: 18px;
 
-
-    margin-top: @heightHeader/2 - 26/2;
+    margin-top: @heightHeader/2 - 18/2;
 
     background-position: top center;
     background-repeat: no-repeat;
-    background-image: url('../media/img/envelope_sprite.png');
+    background-image: url('../media/img/envelope.png');
+
+    .smooth;
 
     &:hover, &:focus {
-      background-position: bottom center;
+      @scaleAmount: 1.2121;
+      transform:         scale(@scaleAmount);
+      -o-transform:      scale(@scaleAmount);
+      -ms-transform:     scale(@scaleAmount);
+      -moz-transform:    scale(@scaleAmount);
+      -webkit-transform: scale(@scaleAmount);
     }
   }
 
