@@ -1,0 +1,33 @@
+#tumblr {
+  position: relative;
+  overflow: hidden;
+}
+#tumblr .background01 {
+  background-image: url('../media/img/introduction/01.jpg');
+}
+#tumblr .background {
+  height: 656px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+#tumblr-title-wrapper {
+  position: absolute;
+  z-index: 20;
+  width: 424px;
+  height: 167px;
+  overflow: visible;
+}
+#tumblr-title {
+  position: relative;
+  background-image: url('../media/img/tumblr/tumblr.png');
+  width: 424px;
+  height: 167px;
+}
