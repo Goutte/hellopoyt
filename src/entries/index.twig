@@ -18,17 +18,18 @@ providers:
          {#data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"#}
     >
         <div id="circle"
+             title="{{ this.tooltips.hellopoyt }}"
              data-anchor-target="#portfolio"
              data--000p-bottom-top="top: 0px;"
              data--100p-bottom-top="top: -300px"
         ></div>
     </div>
 
-    <div id="row-container">
-        <div class="row row01 fullHeight"
+    <div id="row-container" class="fullHeight">
+        <div class="row row01"
              data-anchor-target="#portfolio"
-             data--000p-bottom-top="height: 658px;"{# 600 + @heightHeader #}
-             data--100p-bottom-top="height: 400px"
+             data--000p-bottom-top="height: 100%;"
+             data--100p-bottom-top="height: 50%"
         ></div>
     </div>
 
@@ -192,14 +193,15 @@ providers:
         <div class="background background01 fullHeight"
              data-anchor-target="#tumblr"
              data--000p-bottom-top="top:   0px;"
-             data--200p-bottom-top="top:  50px"
+             data--200p-bottom-top="top: 200px"
         ></div>
 
-        <a id="tumblr-title-wrapper" class="centerized" href="{{ this.contact.tumblr }}">
+        <a id="tumblr-title-wrapper" class="centerized" href="{{ this.contact.tumblr }}" title="{{ this.tooltips.tumblr }}">
             <div id="tumblr-title"
                  data-anchor-target="#tumblr"
-                 data--000p-bottom-top="top: -222px;"
-                 data--200p-bottom-top="top:  300px"
+                 data--000p-bottom-top="top: -222px; opacity: 0.0;"
+                 data--050p-bottom-top="opacity: 1.0;"
+                 data--200p-bottom-top="top:  277px"
             ></div>
         </a>
 

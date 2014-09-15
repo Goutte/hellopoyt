@@ -43,6 +43,7 @@
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript">
 
+    // GLOBAL POLLUTION
     var sk; // Skrollr, the sugary scroll manager
 
     // SMOOTH LOADING WITH NN%
@@ -60,17 +61,6 @@
             });
 
     jQuery(document).ready(function ($) {
-
-        // INTRODUCTION HELLOPOYT
-//        var $circle = $('#introduction-title');
-//        var centerizeCircle = function(){
-//            var widthWindow = $(window).width();
-//            var heightWindow = $(window).height();
-//            $circle.css('left', (widthWindow - $circle.width())/2);
-//            $circle.css('top',  (heightWindow - $circle.height())/2);
-//        };
-//        $(window).on('resize', centerizeCircle);
-//        centerizeCircle();
 
         // FADE-IN HELLOPOYT ON PAGE LOAD
         setTimeout(function(){
@@ -115,7 +105,7 @@
         })();
 
 
-        // PROJECT DETAILS
+        // PROJECT DETAILS NAVIGATION
         $("#portfolio > a").on("click", function(e){
             var $target = $($(this).attr('href'));
             $('#details .detail').hide();

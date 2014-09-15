@@ -698,6 +698,9 @@ table {
 }
 #tumblr .background01 {
   background-image: url('../media/img/introduction/01.jpg');
+  -webkit-box-shadow: inset 0 13px 13px -13px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 13px 13px -13px rgba(0,0,0,0.3);
+  box-shadow: inset 0 13px 13px -13px rgba(0,0,0,0.3);
 }
 #tumblr .background {
   height: 656px;
@@ -850,4 +853,16 @@ footer span#goutte-credits img {
   position: relative;
   top: -2px;
   margin-left: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+footer span#goutte-credits img:hover {
+  -webkit-transform: rotate(12deg) translate(4px,-1px);
+  -moz-transform: rotate(12deg) translate(4px,-1px);
+  -ms-transform: rotate(12deg) translate(4px,-1px);
+  -o-transform: rotate(12deg) translate(4px,-1px);
+  transform: rotate(12deg) translate(4px,-1px);
 }
