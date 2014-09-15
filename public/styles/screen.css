@@ -796,6 +796,11 @@ header h1 {
   margin-right: 25px;
   background: url('../media/img/hellopoyt-white.png') no-repeat center center;
 }
+header h1 a {
+  display: block;
+  height: 56px;
+  width: 120px;
+}
 header nav ul li > * {
   -webkit-transition: all 0.2s ease-in-out;
   -khtml-transition: all 0.2s ease-in-out;
