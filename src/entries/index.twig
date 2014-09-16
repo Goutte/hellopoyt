@@ -43,7 +43,7 @@ providers:
 
     <h2>Work</h2>
 
-    {% for project in this.providers.all_projects %}
+    {% for project in this.providers.all_projects | reverse %}
 
         <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}" class="project_thumbnail" data-menu-offset="-50">
             <article
