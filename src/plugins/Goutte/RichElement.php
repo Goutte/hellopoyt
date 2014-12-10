@@ -76,29 +76,29 @@ class RichElement {
 
         $this->setSlug($dir->getBasename());
 
+        // We iterate on the files of the RichElement directory
+        // We make two passes, because we need sorting
+        // Note the `clone` directive ; without it, $files has "empty" values
         $it = new \DirectoryIterator($dir->getPathname());
         $files = array();
+        // 1st pass
         foreach ($it as $file) {
             if ($file->isFile() && $file->isReadable()) {
                 $filename = $file->getBasename('.'.$file->getExtension());
-                $files[$filename] = $file;
+                $files[$filename] = clone $file;
             }
         }
+        // Alphabetical sort on filenames
         ksort($files);
-        foreach ($files as $file) {
-            if ($file->isFile() && $file->isReadable()) {
-
-                $filename = $file->getBasename('.'.$file->getExtension());
-
-                if ($filename === 'thumbnail' || $filename === 'thumb') {
-                    $this->setThumbnail($this->urlize($file));
-                } else if ($file->getBasename() === 'description.yml') {
-                    $data = Yaml::parse($file->getPathname());
-                    $this->setData($data);
-                } else if (in_array($file->getExtension(), array('jpg', 'jpeg', 'png', 'gif', 'webp'))) {
-                    $this->addImage($this->urlize($file));
-                }
-
+        // 2nd pass
+        foreach ($files as $filename => $file) {
+            if ($filename === 'thumbnail' || $filename === 'thumb') {
+                $this->setThumbnail($this->urlize($file));
+            } else if ($file->getBasename() === 'description.yml') {
+                $data = Yaml::parse($file->getPathname());
+                $this->setData($data);
+            } else if (in_array($file->getExtension(), array('jpg', 'jpeg', 'png', 'gif', 'webp'))) {
+                $this->addImage($this->urlize($file));
             }
         }
 

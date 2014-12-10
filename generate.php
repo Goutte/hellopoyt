@@ -30,9 +30,22 @@ $out = __DIR__ . '/public';
 $base = __DIR__ . '/vendor/farazdagi/phrozn';
 
 
-//// COMPILATION
+//// ERROR HANDLING
 
-e("Starting compilation...");
+error_reporting(E_ALL);
+function handleError($errno, $errstr, $error_file, $error_line) {
+    echo "<b>Error:</b> [$errno] $errstr - $error_file:$error_line<br />";
+    echo "Generation aborted.";
+    die();
+}
+
+set_error_handler("handleError");
+
+
+//// ~COMPILATION
+
+e("Starting generation...");
+
 
 try {
 
@@ -58,7 +71,7 @@ try {
     unset($site, $loader, $outputter);
 
 } catch (Exception $e) {
-    e('Fail', $e->getMessage());
+    e("<b>Fail</b>", $e->getMessage());
 }
 
 e("Done !");
