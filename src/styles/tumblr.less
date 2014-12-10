@@ -11,7 +11,9 @@
   overflow: hidden;
 
   .background01 {
-    background-image: url('../media/img/introduction/01.jpg');
+    //background-image: url('../media/img/tumblr/tumblr-bg.gif');
+    background-color: #5de1d4;
+
 
     -webkit-box-shadow: inset 0 @intensityShadow @intensityShadow -@intensityShadow @colorShadow;
     -moz-box-shadow:    inset 0 @intensityShadow @intensityShadow -@intensityShadow @colorShadow;
@@ -24,7 +26,7 @@
 
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: @colorBlack;
+    background-color: #5de1d4;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -39,10 +41,10 @@
 
 #tumblr-title-wrapper {
   position: absolute;
-  z-index: 20;
+  z-index: 30;
 
-  width: 424px;
-  height: 167px;
+  width: 400px;
+  height: 200px;
 
   overflow: visible;
 }
@@ -50,6 +52,23 @@
 #tumblr-title {
   position: relative;
   background-image: url('../media/img/tumblr/tumblr.png');
-  width: 424px;
-  height: 167px;
+  width: 400px;
+  height: 200px;
+}
+
+#tumblr-image-wrapper {
+  position: absolute;
+  z-index: 20;
+
+  width: 640px;
+  height: 400px;
+
+  overflow: visible;
+}
+
+#tumblr-image {
+  position: relative;
+  background-image: url('../media/img/tumblr/tumblr-bg.gif');
+  width: 640px;
+  height: 400px;
 }
