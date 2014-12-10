@@ -77,7 +77,15 @@ class RichElement {
         $this->setSlug($dir->getBasename());
 
         $it = new \DirectoryIterator($dir->getPathname());
+        $files = array();
         foreach ($it as $file) {
+            if ($file->isFile() && $file->isReadable()) {
+                $filename = $file->getBasename('.'.$file->getExtension());
+                $files[$filename] = $file;
+            }
+        }
+        ksort($files);
+        foreach ($files as $file) {
             if ($file->isFile() && $file->isReadable()) {
 
                 $filename = $file->getBasename('.'.$file->getExtension());
