@@ -1,0 +1,232 @@
+# This page will be embedded as `{{ content }}` in the layout defined below.
+# This is where you'll customize the animations, see skrollr doc for more details.
+
+layout: default.twig
+providers:
+    all_projects:
+        provider: RichElements
+        folder: projects
+
+---
+
+{## INTRODUCTION WITH WINDOW-SIZED IMAGE #}
+<section id="introduction" class="fullHeight">
+
+    <div id="introduction-title" class="centerized"
+         {#data-anchor-target="#portfolio"#}
+         {#data--10p-bottom-top="opacity: 1.0; transform : scale(1.0);"#}
+         {#data--35p-bottom-top="opacity: 0.0; transform : scale(0.0);"#}
+    >
+
+        <div id="circle"
+             title="{{ this.tooltips.hellopoyt }}"
+             data-anchor-target="#portfolio"
+             data--000p-bottom-top="top: -150px;"
+             data--100p-bottom-top="top: -300px"
+        ></div>
+</div>
+
+	<div id="introduction-background" class="centerized"
+         {#data-anchor-target="#portfolio"#}
+   	>
+
+	<div id="home"
+             title="{{ this.tooltips.hellopoyt }}"
+             data-anchor-target="#portfolio"
+             data--000p-bottom-top="top: 100px;"
+             data--100p-bottom-top="top: -300px"
+        ></div>
+
+</div>
+
+<div id="row-container" class="fullHeight">
+        <div class="row row01"
+             data-anchor-target="#portfolio"
+             data--000p-bottom-top="height: 100%;"
+             data--100p-bottom-top="height: 50%"
+	      ></div>
+    </div>
+
+</section>
+
+{# FOR MOBILES, CONTAINER FOR STATIC ELEMENTS #}
+<div id="skrollr-body">
+
+    {## SHOWCASE OF THE PROJECTS AS THUMBNAILS #}
+    <section id="portfolio" data-menu-offset="-50">
+
+    <h2>Work</h2>
+
+    {% for project in this.providers.all_projects | reverse %}
+
+        <a id="thumbnail-{{ project.slug }}" href="#detail-{{ project.slug }}" class="project_thumbnail" data-menu-offset="-50">
+            <article
+                data-0000-bottom-top="opacity: 0.0"
+                data--300-bottom-top="opacity: 1.0;"
+            >
+                <figure>
+                    <img src="{{ project.thumbnail }}" alt="Thumbnail for {{ project.title }}">
+                    <figcaption>
+                        <span class="title">{{ project.title }}</span>
+                        <br>
+                        <span class="client">- {{ project.client }} -</span>
+                    </figcaption>
+                </figure>
+                <div class="rollover-go"></div>
+            </article>
+        </a>
+
+    {% endfor %}
+
+    </section>
+
+
+    {## DETAILS OF EACH PROJECT #}
+    <section id="details">
+
+    {% for project in this.providers.all_projects %}
+
+        <div id="detail-{{ project.slug }}" data-project-slug="{{ project.slug }}" class="detail" data-menu-offset="-50">
+
+            <div class="container">
+
+                <h3>{{ project.title }}</h3>
+
+            {% if project.images is not empty %}
+                <img class="screenshot" src="{{ project.images[0] }}" alt="">
+            {% endif %}
+
+                <div class="infos">
+                {% if project.link is not empty %}
+                    <a class="buttons link" href="{{ project.link }}" target="_blank">link</a>
+                {% endif %}
+
+                    <ul>
+                        <li><span class="key">Mission</span> : {{ project.mission }}</li>
+                        <li><span class="key">Client</span> : {{ project.client }}</li>
+                        <li><span class="key">Agency</span> : {{ project.agency }}</li>
+                    </ul>
+                </div>
+
+            {% if project.images|length > 1 %}
+                <hr>
+                <div class="additional-screenshots">
+                {% for image in project.images %}
+                {% if not loop.first %}
+                    <img class="screenshot" src="{{ image }}" alt="">
+                {% endif %}
+                {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if project.video_youtube is not empty %}
+                <iframe class="video" height="568" src="http://www.youtube.com/embed/{{ project.video_youtube }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+
+            {% if project.video_vimeo is not empty %}
+                <iframe class="video" height="568" src="http://player.vimeo.com/video/{{ project.video_vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+
+                <hr>
+
+                <a class="buttons exit" href="#thumbnail-{{ project.slug }}"></a>
+
+                <div class="nav">
+                    <a class="buttons prev {{ loop.first ? 'disabled' }}" href="#"></a>
+                    <a class="buttons next {{ loop.last ? 'disabled' }}" href="#"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+    </section>
+
+
+    {## INFORMATION ABOUT HELLOPOYT #}
+    <section id="information" data-menu-offset="-10">
+
+        <hr class="clear">
+
+        <h2>Hellopoyt</h2>
+
+        <div class="col_left">
+            <img id="information_pola_back"  src="media/img/information/pola-back.png"  alt=""
+                 data-0000p-bottom-top="left[outCubic]: -600px; transform[outCubic]: rotateZ(-200deg);"
+                 data--090p-bottom-top="left[outCubic]:  130px; transform[outCubic]: rotateZ(20deg);"
+            >
+            <img id="information_pola_front" src="media/img/information/pola-front.png" alt=""
+                 data-0000p-bottom-top="left[outCubic]: -600px; transform[outCubic]: rotateZ(-150deg);"
+                 data--090p-bottom-top="left[outCubic]:  200px; transform[outCubic]: rotateZ(15deg);"
+            >
+        </div>
+
+        <div class="col_right">
+            <p class="first">
+                {{ this.hellopoyt.p1 }}
+            </p>
+            <p class="second">
+                {{ this.hellopoyt.p2 }}
+            </p>
+        </div>
+
+    </section>
+
+
+    <hr class="clear">
+
+
+    {## CONTACT INFORMATION #}
+    <section id="contact">
+
+        <h2>Contact</h2>
+        <nav>
+            <a id="contact_mail" href="{{ this.contact.mail }}">
+                <img src="media/img/contact/btn-mail.png" alt="Mail">
+                <span>mail</span>
+            </a>
+            <a id="contact_behance" href="{{ this.contact.behance }}">
+                <img src="media/img/contact/btn-behance.png" alt="Behance">
+                <span>behance</span>
+            </a>
+            <a id="contact_tumblr" href="{{ this.contact.tumblr }}">
+                <img src="media/img/contact/btn-tumblr.png" alt="Tumblr">
+                <span>tumblr</span>
+            </a>
+        </nav>
+
+    </section>
+
+
+    {## TUMBLR PARALLAX #}
+    <section id="tumblr" class="fullHeight">
+
+        <div class="background background01 fullHeight"
+             data-anchor-target="#tumblr"
+             data--000p-bottom-top="top:   0px;"
+             data--200p-bottom-top="top: 200px"
+        ></div>
+
+        <a id="tumblr-title-wrapper" class="centerized" href="{{ this.contact.tumblr }}" title="{{ this.tooltips.tumblr }}">
+            <div id="tumblr-title"
+                 data-anchor-target="#tumblr"
+                 data--000p-bottom-top="top: -250px; opacity: 0.0;"
+                 data--050p-bottom-top="opacity: 1.0;"
+                 data--200p-bottom-top="top:  200px"
+            ></div>
+        </a>
+
+        <div id="tumblr-image-wrapper" class="centerized" title="{{ this.tooltips.tumblr }}">
+            <div id="tumblr-image"
+                 data-anchor-target="#tumblr"
+                 data--000p-bottom-top="top: -100px;"
+                 data--200p-bottom-top="top:  300px"
+            ></div>
+        </div>
+
+    </section>
+
+</div>

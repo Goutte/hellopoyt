@@ -1,0 +1,238 @@
+@import "configuration";
+@import "mixins";
+
+
+@widthDetailImg:  940px;
+@heightDetailImg: auto;
+@borderThickness: 10px;
+
+
+#portfolio {
+
+  margin: 0 auto 0 auto;
+  padding-top: 50px;
+  width: @widthContainer;
+  overflow: auto;
+
+  h2 {
+    margin: 0 auto 50px auto;
+    font-size: 0;
+    width: 210px;
+    height: 55px;
+    background: url('../media/img/work.png') no-repeat center center;
+    position: relative;
+  }
+
+  a.project_thumbnail {
+
+    article {
+      position: relative;
+
+      div.rollover-go {
+        .smooth;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../media/img/thumb-over.png') no-repeat center 10px;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    &:hover article {
+      div.rollover-go {
+        opacity: 1;
+      }
+      figcaption {
+        color: darken(@colorGrey, 20%);
+        .client {
+          color: darken(@colorGrey, 10%);
+        }
+      }
+    }
+
+  }
+
+  article {
+    float: left;
+    padding: 10px 10px 10px 10px;
+
+    figcaption {
+      padding-top: 13px;
+      text-align: center;
+      color: @colorGrey;
+      letter-spacing: 0;
+
+      .title {
+        font-weight: bold;
+        //text-shadow: 0 0 2px lighten(@colorGrey, 0%);
+      }
+      .client {
+        padding-top: 4px;
+        font-size: 0.8em;
+        color: lighten(@colorGrey, 10%);
+      }
+    }
+  }
+}
+
+
+
+#details {
+
+  .detail {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+
+    background-color: @colorProjectDetailBg;
+    margin: 40px auto;
+    padding: 10px 0 30px 0;
+
+    @intensity: 13px;
+    -moz-box-shadow:    inset  0  @intensity @intensity -@intensity - 1 @colorShadow,
+                        inset  0 -@intensity @intensity -@intensity @colorShadow;
+    -webkit-box-shadow: inset  0  @intensity @intensity -@intensity - 1 @colorShadow,
+                        inset  0 -@intensity @intensity -@intensity @colorShadow;
+    box-shadow:         inset  0  @intensity @intensity -@intensity - 1 @colorShadow,
+                        inset  0 -@intensity @intensity -@intensity @colorShadow;
+
+    .container {
+      width: @widthContainer - 20px;
+      margin: 0 auto;
+
+      hr {
+        width: 100%;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 0.85;
+      font-weight: bold;
+      //text-shadow: 0 0 1px lighten(@colorBlack, 40%);
+      color: lighten(@colorBlack, 20%);
+      letter-spacing: 0;
+    }
+
+    @colorShadow2: fadeout(@colorShadow,10%);
+
+    img.screenshot {
+      border: @borderThickness solid @colorWhite;
+      height: @heightDetailImg;
+      width:  @widthDetailImg;
+
+      -webkit-box-shadow: 3px 3px 5px 0 @colorShadow2;
+      -moz-box-shadow:    3px 3px 5px 0 @colorShadow2;
+      box-shadow:         3px 3px 5px 0 @colorShadow2;
+    }
+
+    ul {
+      margin: 25px 0 25px 25px;
+      font-size: 14px;
+      line-height: 16px;
+
+      li {
+        span.key {
+          display: inline-block;
+          width: 60px;
+
+          font-weight: bold;
+          color: @colorGrey;
+        }
+      }
+    }
+
+    .additional-screenshots {
+      padding-top: 25px;
+      img {
+        margin-bottom: 25px;
+      }
+    }
+
+    .video {
+      border: @borderThickness solid @colorWhite;
+      width:  @widthDetailImg;
+
+      -webkit-box-shadow: 3px 3px 5px 0 @colorShadow2;
+      -moz-box-shadow:    3px 3px 5px 0 @colorShadow2;
+      box-shadow:         3px 3px 5px 0 @colorShadow2;
+
+      margin-bottom: 25px;
+    }
+
+  }
+
+
+
+  .nav {
+    width: 110px;
+    margin: 25px auto 0 auto;
+    overflow: auto;
+  }
+
+  .buttons {
+    display: block;
+
+    width:  44px;
+    height: 44px;
+
+    border-radius:         50%;
+    -moz-border-radius:    50%;
+    -webkit-border-radius: 50%;
+
+    background-color: @colorBlack;
+    background-repeat: no-repeat;
+    background-image: url('../media/img/portfolio/sprite-arrows.png');
+
+    .slick;
+
+    &.prev {
+      float: left;
+      background-position: 0 center;
+      &:hover, &:focus {
+      background-position: -5px center;
+      }
+    }
+    &.next {
+      float: right;
+      background-position: -44px center;
+      &:hover, &:focus {
+        background-position: -39px center;
+      }
+    }
+    &.exit {
+      float: right;
+      background-position: -88px center;
+
+      margin-top: 25px;
+      margin-right: 5px;
+      &:hover, &:focus {
+        transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+    }
+    &.link {
+      float: right;
+      width:  55px;
+      height: 55px;
+      background: @colorBlack url('../media/img/portfolio/link.png') no-repeat center center;
+      font-size: 0;
+    }
+
+    &.disabled {
+      opacity: 0.17;
+      pointer-events: none;
+    }
+
+  }
+
+
+
+
+}

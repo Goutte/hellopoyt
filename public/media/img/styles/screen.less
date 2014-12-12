@@ -1,0 +1,224 @@
+
+@import "configuration";
+@import "reset";
+@import "normalize";
+@import "mixins";
+@import "introduction";
+@import "portfolio";
+@import "information";
+@import "contact";
+@import "tumblr";
+
+
+//// GLOBAL TAGS
+
+html {
+
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: @colorWhite;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  width: @widthContainer;
+  margin: 0 auto;
+  border-bottom: 0;
+  border-top: 1px solid ligthen(@colorBlack, 10%) !important;
+}
+
+
+//// SELECTION
+
+::-moz-selection {
+  background: lighten(@colorBlack,10%);
+  color: darken(@colorWhite, 10%);
+  text-shadow: none;
+}
+
+::selection {
+  background: lighten(@colorBlack,10%);
+  color: darken(@colorWhite, 10%);
+  text-shadow: none;
+}
+
+
+//// ANCHOR FIX FOR FIXED HEADER
+
+.anchor {
+  padding-top: @heightHeader;
+  margin-top: -@heightHeader;
+}
+
+
+//// LOADING
+
+@keyframes loading-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loading {
+  @loadingAnimationDuration: 2.3s;
+
+  animation-name: loading-blink;
+  animation-duration: @loadingAnimationDuration;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+//// HEADER
+
+header {
+
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  height: @heightHeader;
+  width: 100%;
+  background-color: @colorBlack;
+
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.5);
+
+
+  .container {
+    width: @widthContainer;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  h1 {
+    float: left;
+    font-size: 0;
+    height: @heightHeader;
+    width: 120px;
+    margin-right: 25px;
+
+    background: url('../media/img/hellopoyt-white.png') no-repeat center center;
+
+    a {
+      display: block;
+      height: @heightHeader;
+      width: 120px;
+    }
+  }
+
+  @navLinkPadding: 8px;
+
+//  a {
+//    display: block;
+//    height: @heightHeader - @navLinkPadding*2;
+//    margin-top: @navLinkPadding;
+//  }
+
+  nav ul li > * {
+    .smooth;
+
+    display: block;
+    height: @heightHeader - @navLinkPadding*2;
+    margin-top: @navLinkPadding;
+
+    color: @colorWhite;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    float: left;
+    line-height: @heightHeader - @navLinkPadding*2;
+    padding: 0 20px;
+
+    margin-left: 15px;
+
+    border-radius: 5px;
+
+    &:hover, &:focus {
+      background-color: @colorWhite;
+      color: @colorBlack;
+    }
+  }
+
+  a.email{
+    display: block;
+
+    font-size: 0;
+    float:  right;
+    width:  25px;
+    height: 18px;
+
+    margin-top: @heightHeader/2 - 18/2;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url('../media/img/envelope.png');
+
+    .smooth;
+
+    &:hover, &:focus {
+      @scaleAmount: 1.2121;
+      transform:         scale(@scaleAmount);
+      -o-transform:      scale(@scaleAmount);
+      -ms-transform:     scale(@scaleAmount);
+      -moz-transform:    scale(@scaleAmount);
+      -webkit-transform: scale(@scaleAmount);
+    }
+  }
+
+}
+
+
+//// CONTAINER
+
+body > .container {
+//  opacity: 0; // js will set this to 1 when DOM is ready
+}
+
+
+//// FOOTER
+
+footer {
+  height: 300px;
+  background-color: @colorBlack;
+
+  padding: 30px 55px 0 55px;
+
+  color: @colorWhite;
+  font-size: 0.8em;
+
+  line-height: 24px;
+
+  span#hellopoyt-copyright {
+    float: left;
+  }
+  span#goutte-credits {
+    float: right;
+
+    img {
+      float: right;
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+      .smooth;
+      &:hover {
+        -webkit-transform: rotate(12deg) translate(4px, -1px);
+        -moz-transform: rotate(12deg) translate(4px, -1px);
+        -ms-transform: rotate(12deg) translate(4px, -1px);
+        -o-transform: rotate(12deg) translate(4px, -1px);
+        transform: rotate(12deg) translate(4px, -1px);
+      }
+    }
+  }
+}

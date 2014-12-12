@@ -1,0 +1,55 @@
+// This is the tumblr section, with the scrolling animated title
+
+@import "configuration";
+
+#tumblr {
+
+  position: relative;
+
+//  background: #f39; /* debug */
+
+  overflow: hidden;
+
+  .background01 {
+    background-image: url('../media/img/introduction/01.jpg');
+
+    -webkit-box-shadow: inset 0 @intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    -moz-box-shadow:    inset 0 @intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    box-shadow:         inset 0 @intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+  }
+
+  .background {
+    height: 600px + @heightHeader; // overriden by javascript
+    width: 100%;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: @colorBlack;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: relative;
+    z-index: 10;
+  }
+
+}
+
+#tumblr-title-wrapper {
+  position: absolute;
+  z-index: 20;
+
+  width: 424px;
+  height: 167px;
+
+  overflow: visible;
+}
+
+#tumblr-title {
+  position: relative;
+  background-image: url('../media/img/tumblr/tumblr.png');
+  width: 424px;
+  height: 167px;
+}

@@ -1,0 +1,96 @@
+// This is the introduction section, with the scrolling animated black circle
+// and the background images behind, numeroted rowXX.
+@import "configuration";
+
+#introduction {
+
+  .row01 {
+    background-image: url('../media/img/introduction/01.gif’);
+
+    -webkit-box-shadow: inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    -moz-box-shadow:    inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+    box-shadow:         inset 0 -@intensityShadow @intensityShadow -@intensityShadow @colorShadow;
+  }
+
+
+
+//  .row02 {
+//    background-image: url('../media/img/introduction/02.jpg');
+//
+//    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.5);
+//    box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.5);
+//
+//  }
+//
+//  .row03 {
+//    background-image: url('../media/img/introduction/03.jpg');
+//    //background-attachment: fixed;
+//
+//    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    -moz-box-shadow:    inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    box-shadow:         inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//  }
+//
+//  .row04 {
+//    background-image: url('../media/img/introduction/04.jpg');
+//
+//    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.5);
+//    box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.5);
+//  }
+//
+//  .row05 {
+//    background-image: url('../media/img/introduction/05.jpg');
+//
+//    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    -moz-box-shadow:    inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//    box-shadow:         inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+//  }
+
+  .row {
+    height: 600px + @heightHeader;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: @colorBlack;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    //position: fixed;
+    z-index: 10;
+  }
+
+  .row.space {
+    position: inherit !important;
+    background-color: inherit !important;
+    // height overriden by js to 5 times window.height()
+  }
+
+  #row_container {
+    height: 0; // overriden by js to window.height()
+  }
+
+}
+
+#introduction-title {
+  position: absolute;
+  z-index: 20;
+
+  display: none; // displayed by javascript after initial centering
+
+  overflow: visible;
+}
+
+#circle {
+  background-image: url('../media/img/introduction/hellopoyt.png');
+
+  position: relative;
+
+  width: 605px;
+  height: 237px;
+}
+
