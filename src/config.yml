@@ -4,12 +4,9 @@
 
 hellopoyt:
   p1: |
-    Bacon ipsum dolor sit amet labore incididunt et, tail voluptate fugiat meatball cupidatat t-bone kielbasa ea ut andouille culpa.
-    Sausage shoulder meatloaf cow veniam. Aute kielbasa fatback velit, pig ut minim tail tenderloin magna dolore.
-    Pork leberkas jowl pork chop. Pariatur kevin brisket, incididunt minim voluptate tri-tip aute elit pastrami in strip steak.
+    Hello! Je suis Pat Grivet aka Poyt. Je suis illustratrice et designer multimédia depuis plus de 6 ans. Après une forte expérience au sein de l’agence digitale (très) créative Diplomatic-Cover, j’exerce maintenant mon métier et ma passion en freelance sur Lyon. Je réalise des illustrations et des interfaces graphiques pour des sites internet, des applications, des jeux vidéos et du motion. A bientôt!
   p2: |
-    Veniam id dolor pork loin. Mollit pig pork loin ribeye pancetta ut ut turkey ground round capicola veniam frankfurter doner.
-    Est biltong pork loin fugiat laboris. Shank kielbasa ut, ribeye voluptate beef incididunt filet mignon dolor elit pork belly ad rump nisi.
+    Hello! I'm Pat Grivet aka Poyt. I've been a multimedia graphic designer and illustrator for 6 years by now. Having a strong experience in a (really) creative digital agency Diplomatic-Cover, I work now as a freelance in Lyon. I create illustrations and graphic interfaces for websites, applications, video games and motion. See you soon!
 
 
 contact:
@@ -19,7 +16,7 @@ contact:
 
 
 tooltips:
-  hellopoyt: "Hello there. I'm pat, welcome to my place!"
+  hellopoyt: "Hello there. I'm Pat, welcome to my place!"
   tumblr: "Browse my latest sketches and creations, as they go."
 
 
